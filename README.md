@@ -3,11 +3,9 @@ Algorithms and Data Structures
 
 ---
 
-Identify a Linear Time Algorithm.
+Identify a Linear Time Algorithm:
 
-Count Invariants.
-
-Java/MaxInArray.java
+[Java/MaxInArray.java](https://github.com/brettjrea/Algorithms/blob/main/Java/MaxInArray.java)
 
 Compile .java 
 
