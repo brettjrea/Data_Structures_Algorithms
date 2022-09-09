@@ -1,11 +1,11 @@
 # Algorithms
 Algorithms and Data Structures
 
+---
+
 Identify a Linear Time Algorithm.
 
 Count Invariants.
-
----
 
 Java/MaxInArray.java
 
@@ -20,7 +20,8 @@ Run Java
 ---
 
 Write Pseudo-code.
-C++/bubblesort.cpp
+
+[C++/bubblesort.cpp](https://github.com/brettjrea/Algorithms/blob/main/C%2B%2B/bubblesort.cpp)
 
 Compile .cpp 
 
