@@ -3,7 +3,7 @@
 
 ---
 
-Identify a Linear Time Algorithm:
+# Identify a Linear Time Algorithm:
 
 [Java/MaxInArray.java](https://github.com/brettjrea/Algorithms/blob/main/Java/MaxInArray.java)
 
