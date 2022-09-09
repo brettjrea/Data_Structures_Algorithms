@@ -4,6 +4,7 @@ Algorithms and Data Structures
 Identify a Linear Time Algorithm.
 
 Count Invariants.
+
 ---
 
 Java/MaxInArray.java
@@ -11,13 +12,13 @@ Java/MaxInArray.java
 Compile .java 
 
 `javac MaxInArray.java`
----
 
 Run Java 
 
 `java MaxInArray`
 
 ---
+
 Write Pseudo-code.
 C++/bubblesort.cpp
 
@@ -28,4 +29,5 @@ Compile .cpp
 Run .cpp 
 
 `./bubblesort`
+
 ---
