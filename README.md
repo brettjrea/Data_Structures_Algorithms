@@ -4,13 +4,9 @@
 
 [Java/MaxInArray.java](https://github.com/brettjrea/Algorithms/blob/main/Java/MaxInArray.java)
 
-Compile .java 
+Compile .java `javac MaxInArray.java`
 
-`javac MaxInArray.java`
-
-Run Java 
-
-`java MaxInArray`
+Run Java `java MaxInArray`
 
 ---
 
@@ -18,12 +14,8 @@ Run Java
 
 [C++/bubblesort.cpp](https://github.com/brettjrea/Algorithms/blob/main/C%2B%2B/bubblesort.cpp)
 
-Compile .cpp 
+Compile .cpp `g++ bubblesort.cpp -o bubblesort`
 
-`g++ bubblesort.cpp -o bubblesort`
-
-Run .cpp 
-
-`./bubblesort`
+Run .cpp `./bubblesort`
 
 ---
