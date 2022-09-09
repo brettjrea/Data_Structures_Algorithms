@@ -3,7 +3,7 @@
 
 ---
 
-# Identify a Linear Time Algorithm:
+### Identify a Linear Time Algorithm:
 
 [Java/MaxInArray.java](https://github.com/brettjrea/Algorithms/blob/main/Java/MaxInArray.java)
 
@@ -17,7 +17,7 @@ Run Java
 
 ---
 
-Write Pseudo-code.
+### Write Pseudo-code.
 
 [C++/bubblesort.cpp](https://github.com/brettjrea/Algorithms/blob/main/C%2B%2B/bubblesort.cpp)
 
