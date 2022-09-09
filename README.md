@@ -7,24 +7,22 @@ Java/MaxInArray.java
 
 Compile .java
 
-'''
-javac MaxInArray.java
-'''
+`javac MaxInArray.java`
+
 
 Run Java 
 
-'''
-java MaxInArray
-'''
+
+`java MaxInArray`
+
 
 Write Pseudo-code.
 C++/bubblesort.cpp
 
 Compile .cpp
 
-'''
-g++ bubblesort.cpp -o bubblesort
-'''
+`g++ bubblesort.cpp -o bubblesort`
+
 
 Run .cpp
-./bubblesort
+`./bubblesort`
