@@ -1,12 +1,22 @@
-## Algorithms and Data Structures
+# Algorithms and Data Structures
+
+---
 
 ### Identify a Linear Time Algorithm:
 
 [Java/MaxInArray.java](https://github.com/brettjrea/Algorithms/blob/main/Java/MaxInArray.java)
 
-Compile .java `javac MaxInArray.java`
+Compile .java 
 
-Run Java `java MaxInArray`
+```
+javac MaxInArray.java
+```
+
+Run Java 
+
+```
+java MaxInArray
+```
 
 ---
 
@@ -14,8 +24,16 @@ Run Java `java MaxInArray`
 
 [C++/bubblesort.cpp](https://github.com/brettjrea/Algorithms/blob/main/C%2B%2B/bubblesort.cpp)
 
-Compile .cpp `g++ bubblesort.cpp -o bubblesort`
+Compile .cpp 
 
-Run .cpp `./bubblesort`
+```
+g++ bubblesort.cpp -o bubblesort
+```
+
+Run .cpp 
+
+```
+./bubblesort
+```
 
 ---
