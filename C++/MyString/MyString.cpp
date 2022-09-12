@@ -87,7 +87,7 @@ public:
 
 	//Compare two strings												  //Linear Operation O(n)
 	int compareTo(const MyString& str) {
-		//Comparing current object myString(str1) and str,Mystring(str2), Example : if str1 is less than str1 then return -1
+		//Comparing current object myString(str1) and str, myString(str2), Example : if str1 is less than str1 then return -1
 		if ((this->myString, str.myString) < 0) {
 			return -1;
 		}
