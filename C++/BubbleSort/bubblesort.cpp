@@ -1,14 +1,15 @@
 #include <iostream>
 /*
 function Bubble Sort(Values1, Values2){
-for all elements of array
-if array[i] > array[i+1]
-swap(array[i], array[i+1])
+for (i=0 to n-1)   
+for (j=0 to n-1 )               //Invariant is initialized, remains false while running program.
+if array[i] > array[i+1]        //Invariant is true when all the elements to the right of index 0 are greater then index 0
+swap(array[i], array[i+1]) 
 end
 }
 
 function print array(array, size){
-for all elements of array
+for (i=0 to size)
 print array[i]
 end
 }
@@ -31,14 +32,12 @@ void BubbleSort(int values[], int numValues)
     int i, j;
     int temp;
 
-    // outer loop to travel through the all elements
+    // Outer loop that begins at 0 and moves up until numValues - 1
     for (i = 0; i < numValues - 1; i++)
     {
-        // inner loop to compare the outer loop elements
-
+        // Inner loop that begins at 0 and moves up until numValues -1 this carries the swap logic.
         for (j = 0; j < numValues - i - 1; j++)
-            // if element at j< than j+1 than swap both
-
+            // if element at j < than j+1 than swap both
             if (values[j] > values[j + 1])
             {
                 // swap logic

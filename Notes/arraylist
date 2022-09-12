@@ -1,0 +1,40 @@
+public boolean add(E e)   
+{  
+  ensureCapacityInternal(size + 1);  // Increments modCount!!  
+  elementData[size++] = e;  
+  return true;  
+}  
+
+private void ensureCapacityInternal(int minCapacity)   
+{  
+  if (elementData == DEFAULTCAPACITY_EMPTY_ELEMENTDATA)   
+  {  
+    minCapacity = Math.max(DEFAULT_CAPACITY, minCapacity);  
+  }  
+  ensureExplicitCapacity(minCapacity);  
+}  
+
+private static final int DEFAULT_CAPACITY = 10;  
+private void ensureExplicitCapacity(int minCapacity) {  
+    modCount++;  
+    // overflow-conscious code  
+    if (minCapacity - elementData.length > 0)  
+       grow(minCapacity);  
+}  
+
+//Use minimum capacity to determine new capacity
+private void grow(int minCapacity)   
+{  
+    // overflow-conscious code  
+    int oldCapacity = elementData.length;  
+    int newCapacity = oldCapacity + (oldCapacity >> 1);  
+    if (newCapacity - minCapacity < 0)  
+        newCapacity = minCapacity;  
+    if (newCapacity - MAX_ARRAY_SIZE > 0)  
+        newCapacity = hugeCapacity(minCapacity);  
+    // minCapacity is usually close to size, so this is a win:  
+    elementData = Arrays.copyOf(elementData, newCapacity);  
+}  
+
+//Remove element n-1
+System.arraycopy(elementData, index+1, elementData, index, numMoved);  

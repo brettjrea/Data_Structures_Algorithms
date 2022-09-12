@@ -6,17 +6,17 @@ private:
 	char* myString;
 	int curr_length;
 	int arr_size;
-	//Ensure capacity to array
+	//Ensure capacity to array       								 
 	void ensureCapacity() {
 		arr_size += arr_size;
 		char* temp;
 		temp = new char[curr_length + 1];
-		for (int i = 0; i < curr_length; i++) {
+		for (int i = 0; i < curr_length; i++) {						//Linear Operation O(n)
 			temp[i] = myString[i];
 		}
 		temp[curr_length] = '\0';
 		myString = new char[arr_size];
-		for (int i = 0; i < curr_length; i++) {
+		for (int i = 0; i < curr_length; i++) {						 //Linear Operation O(n)
 			myString[i] = temp[i];
 		}
 		myString[curr_length] = '\0';
@@ -28,24 +28,24 @@ public:
 		arr_size = 0;
 		myString = NULL;
 	}
-	//Parameterized constructor
+	//Parameterized constructor							 			
 	MyString(string str) {
 		arr_size = str.length() + 1;
 		myString = new char[arr_size];
 		curr_length = 0;
-		for (int i = 0; i < str.length(); i++) {
+		for (int i = 0; i < str.length(); i++) {					 //Linear Operation O(n)
 			myString[i] = str[i];
 			curr_length++;
 		}
 		myString[curr_length] = '\0';
 	}
 	//Copy constructor
-	MyString(const MyString& str) {
+	MyString(const MyString& str) {										
 		arr_size = str.arr_size;
 		myString = new char[arr_size];
 		curr_length = 0;
-		for (int i = 0; i < str.curr_length; i++) {
-			myString[i] = str.myString[i];
+		for (int i = 0; i < str.curr_length; i++) {					 //Linear Operation O(n)
+			myString[i] = str.myString[i];			
 			curr_length++;
 		}
 		myString[curr_length] = '\0';
@@ -56,7 +56,7 @@ public:
 	}
 	//Extraction operator overload
 	friend ostream& operator<<(ostream& out, const MyString& str) {
-		for (int i = 0; i < str.curr_length; i++) {
+		for (int i = 0; i < str.curr_length; i++) {					//Linear Operation O(n)
 			out << str.myString[i];
 		}
 		return out;
@@ -67,15 +67,15 @@ public:
 		while (this->arr_size < capacity) {
 			this->ensureCapacity();
 		}
-		for (int i = 0; i < str.curr_length; i++) {
+		for (int i = 0; i < str.curr_length; i++) {						//Linear Operation O(n)
 			this->myString[curr_length++] = str.myString[i];
 		}
 		this->myString[curr_length] = '\0';
 		return *this;
 	}
-	bool operator==(const MyString& str) {
+	bool operator==(const MyString& str) {									
 		if (str.curr_length == curr_length) {
-			for (int i = 0; i < str.curr_length; i++) {
+			for (int i = 0; i < str.curr_length; i++) {					//Linear Operation O(n)
 				if (this->myString[i] != str.myString[i]) {
 					return 0;
 				}
@@ -84,7 +84,8 @@ public:
 		}
 		return false;
 	}
-	//Compare two strings
+
+	//Compare two strings												  //Linear Operation O(n)
 	int compareTo(const MyString& str) {
 		//Comparing current object myString(str1) and str,Mystring(str2), Example : if str1 is less than str1 then return -1
 		if ((this->myString, str.myString) < 0) {
@@ -109,13 +110,13 @@ public:
 	}
 	//Uppercase a string
 	void toUpper() {
-		for (int i = 0; i < curr_length; i++) {
+		for (int i = 0; i < curr_length; i++) {								 //Linear Operation O(n)
 			myString[i] = toupper(myString[i]);
 		}
 	}
 	//Lowercase a string
 	void toLower() {
-		for (int i = 0; i < curr_length; i++) {
+		for (int i = 0; i < curr_length; i++) {								 //Linear Operation O(n)
 			myString[i] = tolower(myString[i]);
 		}
 	}
@@ -125,7 +126,7 @@ public:
 		if (index < curr_length) {
 			temp = new char[curr_length + 1];
 			int i = 0, j = 0;
-			for (i = index; i < curr_length; i++) {
+			for (i = index; i < curr_length; i++) {							//Linear Operation O(n)
 				temp[j++] = myString[i];
 			}
 			temp[j] = '\0';
@@ -138,7 +139,7 @@ public:
 		temp = new char[curr_length + 1];
 		if (m < curr_length) {
 			int i = 0, j = 0;
-			for (i = n; i <= m; i++) {
+			for (i = n; i <= m; i++) {									 //Linear Operation O(n)	
 				temp[j++] = myString[i];
 			}
 			temp[j] = '\0';
@@ -147,8 +148,8 @@ public:
 	}
 	int indexOf(const MyString& str) {
 		char* temp;
-		for (int i = 0; i < curr_length; i++) {
-			if (str.myString[0] == myString[i]) {
+		for (int i = 0; i < curr_length; i++) {							//Linear Operation O(n)
+			if (str.myString[0] == myString[i]) {						
 				temp = this->substring(i, i + str.curr_length - 1);
 				cout << temp << endl;
 				if ((str.myString, temp) == 0) {
@@ -160,9 +161,9 @@ public:
 	}
 	int lastIndexOf(const MyString& str) {
 		char* temp;
-		for (int i = curr_length - 1; i >= 0; i--) {
+		for (int i = curr_length - 1; i >= 0; i--) {					 //Linear Operation O(n)
 			if (str.myString[0] == myString[i]) {
-				temp = this->substring(i, i + str.curr_length - 1);
+				temp = this->substring(i, i + str.curr_length - 1);		
 				if ((str.myString, temp) == 0) {
 					return i;
 				}
