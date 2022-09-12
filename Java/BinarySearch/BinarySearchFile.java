@@ -5,11 +5,11 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-public class BinarySearchFile {
+public class BinarySearchFile {                                                
 
     // method to sort the array of Strings by size in ascending order using
     // selection sort
-    public static void sort(String[] words, int size) {
+    public static void sort(String[] words, int size) {              //Big O (n^2)
         int min;
         // loop over the array from index 0 to second last index
         for (int i = 0; i < size - 1; i++) {
@@ -29,7 +29,7 @@ public class BinarySearchFile {
         }
     }
 
-    public static void bubbleSort(String[] words, int size) {
+    public static void bubbleSort(String[] words, int size) {                  //Big O (n^2)
         String temp;
 
         // Sorting strings using bubble sort
@@ -45,7 +45,7 @@ public class BinarySearchFile {
     }
 
     // method to search for a string key in array words using binary search
-    public static int binarySearch(String[] words, String key, int size) {
+    public static int binarySearch(String[] words, String key, int size) {        // Big O(Log N)
         int low = 0, high = size - 1; // initialize low and high to first and last index of array words
         int mid;
         // loop that continues until range is invalid or key is found
