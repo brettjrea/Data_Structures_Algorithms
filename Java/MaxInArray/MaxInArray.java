@@ -1,4 +1,5 @@
-//MaxInArray.java
+package MaxInArray;
+//MaxInArray;
 // An example for Algorithms and Data Structures
 
 //Identify a linear time algorithm O(1)
