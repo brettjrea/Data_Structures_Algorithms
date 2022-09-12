@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class BinarySearchFile {
 
-    // method to sort the array of Strings of size in ascending order using
+    // method to sort the array of Strings by size in ascending order using
     // selection sort
     public static void sort(String[] words, int size) {
         int min;
