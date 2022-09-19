@@ -2,6 +2,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch SinglyLinkedList",
+            "request": "launch",
+            "mainClass": "SlinkedList.SinglyLinkedList",
+            "projectName": "Algorithms_8a7c966"
+        },
+        {
+            "type": "java",
+            "name": "Launch SinglyLinkedListMergeSort",
+            "request": "launch",
+            "mainClass": "SinglyLinkedListMergeSort",
+            "projectName": "Algorithms_8a7c966"
+        },
+        {
+            "type": "java",
             "name": "Launch DLinkedList",
             "request": "launch",
             "mainClass": "DoublyLinkedList.DLinkedList",
