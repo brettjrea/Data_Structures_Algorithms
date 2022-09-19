@@ -4,6 +4,13 @@
             "type": "java",
             "name": "Launch DLinkedList",
             "request": "launch",
+            "mainClass": "DoublyLinkedList.DLinkedList",
+            "projectName": "Algorithms_8a7c966"
+        },
+        {
+            "type": "java",
+            "name": "Launch DLinkedList",
+            "request": "launch",
             "mainClass": "DLinkedList",
             "projectName": "Algorithms_8a7c966"
         },
