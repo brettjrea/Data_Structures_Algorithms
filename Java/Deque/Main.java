@@ -1,3 +1,5 @@
+//Deque interface supports resizable arrays that can grow as required.
+//Array dequeues do not allow the use of Null values.
 package Deque;
 import java.util.*; 
 public class Main { 
@@ -5,6 +7,7 @@ public class Main {
         //Declare Deque object using Array or LinkedList class to use the functionality of deque interface.
         Deque<String> deque = new ArrayDeque<String>(); 
         //Deque<String> deque = new LinkedList<String>(); 
+
         // Common methods 
         deque.add("One");           //add ()
         deque.addFirst("Two");      //addFirst ()
@@ -13,17 +16,18 @@ public class Main {
         deque.offer("Five");        //offer ()
         deque.offerFirst("Six");    //offerFirst ()
         deque.offerLast("Seven");   //offerLast ()
+
         // Print details
         System.out.println("\nDeque:");
         System.out.println(deque + " "); 
       
-       // Iterate using standard iterator
+       // Iterate using forward iterator
         System.out.println("\nForward Iterator:"); 
         Iterator iterator = deque.iterator(); 
         while (iterator.hasNext()) 
             System.out.print(" " + iterator.next()); 
         
-       // Iterate using Reverse order iterator 
+       // Iterate using Reverse iterator 
         Iterator reverse = deque.descendingIterator(); 
         System.out.println("\n\nReverse Iterator:"); 
         while (reverse.hasNext()) 
