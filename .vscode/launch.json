@@ -4,6 +4,13 @@
             "type": "java",
             "name": "Launch Main",
             "request": "launch",
+            "mainClass": "Main",
+            "projectName": "Algorithms_8a7c966"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
             "mainClass": "Deque.Main",
             "projectName": "Algorithms_8a7c966"
         },

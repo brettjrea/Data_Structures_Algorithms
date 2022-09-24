@@ -23,12 +23,12 @@ public class Main {
       
        // Iterate using forward iterator
         System.out.println("\nForward Iterator:"); 
-        Iterator iterator = deque.iterator(); 
+        Iterator<?> iterator = deque.iterator(); 
         while (iterator.hasNext()) 
             System.out.print(" " + iterator.next()); 
         
        // Iterate using Reverse iterator 
-        Iterator reverse = deque.descendingIterator(); 
+        Iterator<?> reverse = deque.descendingIterator(); 
         System.out.println("\n\nReverse Iterator:"); 
         while (reverse.hasNext()) 
             System.out.print(" " + reverse.next()); 
