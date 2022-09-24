@@ -15,36 +15,34 @@ class Main {
         numQueue.add("Nine"); 
    
         // Print the head element using Peek () method 
-        System.out.println("Head element using peek method:"  + numQueue.peek()); 
+        System.out.println("Peek at head: "  + numQueue.peek()); 
    
         // Printing all elements 
-        System.out.println("\n\nThe PriorityQueue elements:"); 
+        System.out.print("\nThe PriorityQueue elements: "); 
         Iterator<?> iter1 = numQueue.iterator(); 
         while (iter1.hasNext()) 
             System.out.print(iter1.next() + " "); 
    
         // remove head with poll () 
         numQueue.poll(); 
-        System.out.println("\n\nAfter removing an element" +  "with poll function:"); 
+        System.out.print("\n\nRemoved head element with poll function: "); 
         Iterator<String> iter2 = numQueue.iterator(); 
         while (iter2.hasNext()) 
             System.out.print(iter2.next() + " "); 
    
         // Remove 'Three' using remove ()
         numQueue.remove("Three"); 
-        System.out.println("\n\nElement 'Three' with"
-                           + " remove function:"); 
+        System.out.print("\n\nRemoved 'Three' with remove function: "); 
         Iterator<String> iter3 = numQueue.iterator(); 
         
       while (iter3.hasNext()) 
             System.out.print(iter3.next() + " "); 
    
-        // Check if an element is present in PriorityQueue using contains() 
+        // Check for five using contains() return true or false.
         boolean ret_val = numQueue.contains("Five"); 
-        System.out.println("\n\nPriority queue contains 'Five' "
-                           + "or not?: " + ret_val); 
+        System.out.println("\n\nUse Contain to check PriorityQueue for Five return true or false: " + ret_val); 
    
-        // get array equivalent of PriorityQueue with toArray () 
+        // cast to array with toArray () 
         Object[] numArr = numQueue.toArray(); 
         System.out.println("\nArray Contents: "); 
         for (int i = 0; i < numArr.length; i++) 
