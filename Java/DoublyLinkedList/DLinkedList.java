@@ -15,7 +15,7 @@ public class DLinkedList<T extends Comparable<T>> {
 		DLinkedList<String> lst1 = new DLinkedList<>();
 		DLinkedList<String> lst2 = new DLinkedList<>();
 
-		Scanner fin = new Scanner(new File("text1.in"));
+		Scanner fin = new Scanner(new File("Java/DoublyLinkedList/text1.in"));
 		String str;
 
 		while (fin.hasNext()) {
@@ -25,7 +25,7 @@ public class DLinkedList<T extends Comparable<T>> {
 		}
 		fin.close();
 
-		fin = new Scanner(new File("text2.in"));
+		fin = new Scanner(new File("Java/DoublyLinkedList/text2.in"));
 		while (fin.hasNext()) {
 			str = fin.next();
 			str = cleanUp(str);
