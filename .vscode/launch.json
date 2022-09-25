@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch SinglyLinkedListMergeSort",
+            "request": "launch",
+            "mainClass": "SingleLinkedListMergeSort.SinglyLinkedListMergeSort",
+            "projectName": "Algorithms_8a7c966"
+        },
+        {
+            "type": "java",
             "name": "Launch Main",
             "request": "launch",
             "mainClass": "Compareto.Main",

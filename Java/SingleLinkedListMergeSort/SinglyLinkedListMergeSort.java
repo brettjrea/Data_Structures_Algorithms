@@ -185,8 +185,8 @@ public class SinglyLinkedListMergeSort {
         if (sList.size() <= 1)
             return sList;
 
-        List spliList = splitSinglyLinkedList(sList);
-        SinglyLinkedList leftHalf = (SinglyLinkedList) spliList.get(0), rightHalf = (SinglyLinkedList) spliList.get(1);
+        List<?> splitList = splitSinglyLinkedList(sList);
+        SinglyLinkedList leftHalf = (SinglyLinkedList) splitList.get(0), rightHalf = (SinglyLinkedList) splitList.get(1);
         SinglyLinkedList leftLinkedList = mergeSortSinglyLinkedList(leftHalf);
         SinglyLinkedList rightLinkedList = mergeSortSinglyLinkedList(rightHalf);
 
@@ -195,7 +195,7 @@ public class SinglyLinkedListMergeSort {
 
     public static List<SinglyLinkedList> splitSinglyLinkedList(SinglyLinkedList sList) {
         int sListSize = sList.size();
-        SinglyLinkedList.Node curreNode = sList.head;
+        SinglyLinkedList.Node currentNode = sList.head;
 
         SinglyLinkedList left = new SinglyLinkedList();
         SinglyLinkedList right = new SinglyLinkedList();
@@ -205,11 +205,11 @@ public class SinglyLinkedListMergeSort {
 
         for (int i = 1; i < sListSize + 1; i++) {
             if (i <= midpoint)
-                left.append(curreNode.data);
+                left.append(currentNode.data);
             if (i > midpoint)
-                right.append(curreNode.data);
+                right.append(currentNode.data);
 
-            curreNode = curreNode.nextNode;
+            currentNode = currentNode.nextNode;
         }
 
         sListArr.add(left);
