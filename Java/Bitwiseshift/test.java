@@ -1,4 +1,4 @@
-package Notes;
+package Bitwiseshift;
 
 public class test {
     public static void main(String args[])  {  
