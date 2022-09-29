@@ -1,7 +1,9 @@
 /*
 Recursive Merge Sort
 
-This is a top-down approach. In this approach, the array to be sorted is broken down into smaller arrays until each array contains only one element.
+This is a top-down approach. In this approach, 
+the array to be sorted is broken down into smaller arrays
+until each array contains only one element.
 
 Time complexity of Merge Sort is θ(Nlog(N)) in all 3 cases (worst, average, and best)    
 
