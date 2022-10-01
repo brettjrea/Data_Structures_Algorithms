@@ -58,18 +58,18 @@ public class NQueenProblem {
 		for (int i = 0; i < N; i++) {
 			/* Check if the queen can be placed on
 			board[i][col] */
-			if (isSafe(board, i, col)) {
+			if (isSafe(board, i, col)) {									//<----calling isSafe.
 				/* Place this queen in board[i][col] */
 				board[i][col] = 1;
 
 				/* recur to place rest of the queens */
-				if (solveNQUtil(board, col + 1) == true)
+				if (solveNQUtil(board, col + 1) == true)					//<----Recursively calling solveNQUtil and running isSafe
 					return true;
 
 				/* If placing queen in board[i][col]
 				doesn't lead to a solution then
 				remove queen from board[i][col] */
-				board[i][col] = 0; // BACKTRACK
+				board[i][col] = 0;											//<----Backtracking
 			}
 		}
 
