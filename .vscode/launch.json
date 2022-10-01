@@ -2,6 +2,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch NQueenProblem",
+            "request": "launch",
+            "mainClass": "NQueenProblem",
+            "projectName": "Algorithms_8a7c966"
+        },
+        {
+            "type": "java",
+            "name": "Launch NQueen",
+            "request": "launch",
+            "mainClass": "NQueen",
+            "projectName": "Algorithms_8a7c966"
+        },
+        {
+            "type": "java",
             "name": "Launch Main",
             "request": "launch",
             "mainClass": "Stacks.ArrayStack.Main",
