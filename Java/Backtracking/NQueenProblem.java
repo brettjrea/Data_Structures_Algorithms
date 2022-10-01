@@ -1,5 +1,8 @@
 /* Java program to solve N Queen Problem using
-backtracking */
+backtracking 
+Time Complexity: O(N!)
+Auxiliary Space: O(N2)
+*/
 public class NQueenProblem {
 	final int N = 8;
 
