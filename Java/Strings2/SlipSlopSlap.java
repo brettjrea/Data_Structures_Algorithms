@@ -2,8 +2,10 @@ package Strings2;
 
 // JAVA Code
 
-import java.util.ArrayList;
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class SlipSlopSlap {
 
@@ -81,11 +83,11 @@ return true;
 }
 
 //find the last occurrence of 'C'
-int lastCidx = str.lastIndexOf('C');
-if(lastCidx == -1){
+int lastCindex = str.lastIndexOf('C');
+if(lastCindex == -1){
 return false;
 }else{
-if(isSlap(str.substring(0,lastCidx+1)) && isSlip(str.substring(lastCidx+1))){
+if(isSlap(str.substring(0,lastCindex+1)) && isSlip(str.substring(lastCindex+1))){
 return true;
 }else{
 return false;
@@ -100,7 +102,8 @@ return false;
 */
 public static void main(String[] args) {
 // TODO Auto-generated method stub
-Scanner in = new Scanner(System.in);
+Scanner in = new Scanner(new File("Java/Strings2/sss.in"));
+
 int n = in.nextInt();
 ArrayList<String> list = new ArrayList<String>();
 for(int i =0;i<n;i++){
@@ -117,5 +120,4 @@ System.out.println("NO");
 System.out.println("END OF OUTPUT");
 
 }
-
 }
