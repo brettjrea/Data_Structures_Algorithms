@@ -100,7 +100,7 @@ public class SlipSlapSlop {
 
 	public static void main(String[] args) throws NumberFormatException, IOException {
 
-		BufferedReader buffReader = new BufferedReader(new FileReader("sss.in"));
+		BufferedReader buffReader = new BufferedReader(new FileReader("Java/SlipSlapSlop/sss.in"));
 		int i = 0;
 		@SuppressWarnings("unused")
 		int N = 0;
