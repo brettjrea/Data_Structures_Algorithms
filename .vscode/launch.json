@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch SlipSlapSlop",
+            "request": "launch",
+            "mainClass": "Strings.SlipSlapSlop",
+            "projectName": "Algorithms_8a7c966"
+        },
+        {
+            "type": "java",
             "name": "Launch NQueenProblem",
             "request": "launch",
             "mainClass": "NQueenProblem",
