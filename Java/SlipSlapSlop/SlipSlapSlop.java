@@ -1,4 +1,4 @@
-package Strings;
+package SlipSlapSlop;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -32,7 +32,7 @@ public class SlipSlapSlop {
 		return isSlip(s, index);
 
 	}
-	/**
+	   /**
      * A slap has the following rules
      * its first character is an A
      * if it is a two character slap, then its second character is an H
@@ -54,7 +54,6 @@ public class SlipSlapSlop {
 			// last two characters
 			return (s.charAt(index) == 'A' && s.charAt(index + 1) == 'E');
 		}
-		
 		// choose a substring from index to excluding last index.
 		index++;
 		String slip = s.substring(index, s.length() - 1);
@@ -64,7 +63,7 @@ public class SlipSlapSlop {
 		return temp;
 
 	}
-	/** A slop is a character string that contains a Slap followed by a Slip
+	   /** A slop is a character string that contains a Slap followed by a Slip
      * Examples of Slops: AHDFG, ADFGCDFFFFFG, ABAEFGCCDFEFFFFFG
      */
 	public static void isSlop(String s) {
@@ -80,12 +79,9 @@ public class SlipSlapSlop {
 		if (index == -1) {
 			temp = false;
 		} else {
-			if(s.charAt(index + 1) == 'C') {
-				index++;
-			}
-			System.out.println(s);
-			//System.out.println(s.substring(0, index + 1));
-			//System.out.println(s.substring(index + 1));
+			System.out.println(s.substring(0, index + 1));
+			System.out.println(s.substring(index + 1));
+
 			// split string for slap or slip
 			temp = isSlap(s.substring(0, index), 0) || isSlip(s.substring(index + 1), 0);
 		}
@@ -104,7 +100,7 @@ public class SlipSlapSlop {
 
 	public static void main(String[] args) throws NumberFormatException, IOException {
 
-		BufferedReader buffReader = new BufferedReader(new FileReader("Java/Strings/sss.in"));
+		BufferedReader buffReader = new BufferedReader(new FileReader("sss.in"));
 		int i = 0;
 		@SuppressWarnings("unused")
 		int N = 0;
@@ -127,4 +123,5 @@ public class SlipSlapSlop {
 		buffReader.close();
 		System.out.println("END OF OUTPUT");
 	}
+
 }

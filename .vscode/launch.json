@@ -2,6 +2,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch SlipSlapSlop",
+            "request": "launch",
+            "mainClass": "SlipSlapSlop.SlipSlapSlop",
+            "projectName": "Algorithms_8a7c966"
+        },
+        {
+            "type": "java",
+            "name": "Launch SlipSlapSlop",
+            "request": "launch",
+            "mainClass": "SlipSlapSlop",
+            "projectName": "Algorithms_8a7c966"
+        },
+        {
+            "type": "java",
             "name": "Launch SlipSlopSlap",
             "request": "launch",
             "mainClass": "Strings2.SlipSlopSlap",
