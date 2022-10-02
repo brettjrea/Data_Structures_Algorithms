@@ -58,6 +58,7 @@ public class SlipSlapSlop {
 		index++;
 		String slip = s.substring(index, s.length() - 1);
 		boolean temp = isSlip(slip, 0) && (s.charAt(s.length() - 1) == 'C');
+		
 		String slap = s.substring(index + 1, s.length() - 1);
 		temp = temp || (s.charAt(index) == 'B' && isSlap(slap, 0) && s.charAt(s.length() - 1) == 'C');
 		return temp;
@@ -79,8 +80,9 @@ public class SlipSlapSlop {
 		if (index == -1) {
 			temp = false;
 		} else {
-			System.out.println(s.substring(0, index + 1));
-			System.out.println(s.substring(index + 1));
+			System.out.println(s);
+			//System.out.println(s.substring(0, index + 1));
+			//System.out.println(s.substring(index + 1));
 
 			// split string for slap or slip
 			temp = isSlap(s.substring(0, index), 0) || isSlip(s.substring(index + 1), 0);
