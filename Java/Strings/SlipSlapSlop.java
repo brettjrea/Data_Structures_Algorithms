@@ -79,8 +79,9 @@ public class SlipSlapSlop {
 		if (index == -1) {
 			temp = false;
 		} else {
-			System.out.println(s.substring(0, index + 1));
-			System.out.println(s.substring(index + 1));
+			System.out.println(s);
+			//System.out.println(s.substring(0, index + 1));
+			//System.out.println(s.substring(index + 1));
 
 			// split string for slap or slip
 			temp = isSlap(s.substring(0, index), 0) || isSlip(s.substring(index + 1), 0);
