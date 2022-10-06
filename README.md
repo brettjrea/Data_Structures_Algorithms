@@ -58,14 +58,14 @@ Read **strings** from file with **Filescan** to an **array**, Sort the Data with
 
 [Java/BinarySearch](https://github.com/brettjrea/Algorithms/blob/main/Java/BinarySearch/Main.java#L8)
 
-Compile .java
+---
 
-```
-javac Main.java
-```
 
-Run Java
 
-```
-java Main
-```
+### SinglyLinkedList w/ Big-O Notation.
+
+Create **SinglyLinkedList** add and remove values, merge values. Analyze using **Big-O Notation**.
+
+[Java/SinglyLinkedList](https://github.com/brettjrea/Algorithms/blob/97b9b176321da91ff8811895651cb0bbac077dfe/Java/SinLinkedList/SinglyLinkedList.java#L1)
+
+---
