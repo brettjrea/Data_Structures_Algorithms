@@ -1,130 +1,123 @@
 package Strings;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+// JAVA Code
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+import java.util.ArrayList;
 
 public class SlipSlapSlop {
 
-    /**
-     * A slip has the following rules
-     * Its first character is either D of E
-     * The first character is followed by a string of 1 or more F's
-     * the string of F's is followed by another Slip (D or E) or a G
-     * the Slip (D or E) or G that follows the string of F's ends the string.  Ex EFFFFG
-     * Examples of Slips: DFG, EFG, DFFFFFG, DFDFDFDFG, DFEFFFFFG
-     */
-	public static boolean isSlip(String s, int index) {
-		if (index == s.length())
-			return false;
-		if (index + 1 == s.length()) { // this is the last character.
-			return s.charAt(index) == 'G';
-		}
-		// check if the first char is not either D or 'E'
-		if (!(s.charAt(index) == 'D' || s.charAt(index) == 'E'))
-			return false;
-		index++;
-		if (s.charAt(index) != 'F')
-			return false;
-		while (index < s.length() && s.charAt(index) == 'F') {
-			index++;
-		}
-		return isSlip(s, index);
+public static boolean isSlip(String str){
+if(str.length() <= 2){
+return false;
+}
 
-	}
-	/**
-     * A slap has the following rules
-     * its first character is an A
-     * if it is a two character slap, then its second character is an H
-     * if it is not a two character slap, then it is in one of these two forms:
-     *      A followed by B followed by a Slap (AB, or AH) followed by a C
-     *      A followed by a Slip followed by a C
-     * Examples of Slaps: AH, ABAHC, ABABAHCC, ADFGC, ADFFFFGC, ABAEFGCC, ADFDFGC
-     */
-	public static boolean isSlap(String s, int index) {
-		if (index == s.length())
-			return false;
-		if (s.length() == 2) {
-			return (s.charAt(1) == 'H' && s.charAt(0) == 'A');
-		}
-		if (index + 1 == s.length()) {
-			return (s.charAt(index) == 'C');
-		}
-		if (index + 2 == s.length()) {
-			// last two characters
-			return (s.charAt(index) == 'A' && s.charAt(index + 1) == 'E');
-		}
-		
-		// choose a substring from index to excluding last index.
-		index++;
-		String slip = s.substring(index, s.length() - 1);
-		boolean temp = isSlip(slip, 0) && (s.charAt(s.length() - 1) == 'C');
-		String slap = s.substring(index + 1, s.length() - 1);
-		temp = temp || (s.charAt(index) == 'B' && isSlap(slap, 0) && s.charAt(s.length() - 1) == 'C');
-		return temp;
+if(str.charAt(0) != 'D' && str.charAt(0) != 'E'){
+return false;
+}
 
-	}
-	/** A slop is a character string that contains a Slap followed by a Slip
-     * Examples of Slops: AHDFG, ADFGCDFFFFFG, ABAEFGCCDFEFFFFFG
-     */
-	public static void isSlop(String s) {
-		boolean temp = false;
-		int index = -1;
+if(str.charAt(1) != 'F'){
+return false;
+}
 
-		// get index of last character for slap string
-		index = s.indexOf('C');
-		if (index == -1) {
-			index = s.indexOf('H');
-		}
+//check for a sequence of F's
 
-		if (index == -1) {
-			temp = false;
-		} else {
-			if(s.charAt(index + 1) == 'C') {
-				index++;
-			}
-			System.out.println(s);
-			//System.out.println(s.substring(0, index + 1));
-			//System.out.println(s.substring(index + 1));
-			// split string for slap or slip
-			temp = isSlap(s.substring(0, index), 0) || isSlip(s.substring(index + 1), 0);
-		}
+int i = 1,n;
+n = str.length();
+while(i < n && str.charAt(i)=='F'){
+i += 1;
+}
 
-		for (int i = 2; i < s.length() - 2; i++) {
-			temp = temp || (isSlap(s.substring(0, i), 0) && isSlip(s.substring(i + 1), 0));
-		}
+if(i == n){
+return false;
+}
 
-		if (temp == true) {
-			System.out.println("YES");
-		} else {
-			System.out.println("NO");
-		}
+//check if it's a G or a slip
+if((n == i+1 && str.charAt(i)=='G') || isSlip(str.substring(i))){
+return true;
+}else{
+return false;
+}
 
-	}
+}
 
-	public static void main(String[] args) throws NumberFormatException, IOException {
+public static boolean isSlap(String str){
+if(str.length() == 1){
+return false;
+}else if(str.length() == 2){
+if(str.charAt(0) == 'A' && str.charAt(1) == 'H'){
+return true;
+}else{
+return false;
+}
+}else if(str.length() == 3 || str.length() == 4){
+return false;
+}else{
+if(str.charAt(0) != 'A'){
+return false;
+}
+int n = str.length();
+boolean case1 = isSlap(str.substring(2, n-1)) && (str.charAt(n-1)=='C');
+boolean case2 = isSlip(str.substring(1, n-1)) && (str.charAt(n-1)=='C');
+if((str.charAt(1)=='B' && case1) || case2){
+return true;
+}else{
+return false;
+}
+}
 
-		BufferedReader buffReader = new BufferedReader(new FileReader("Java/Strings/sss.in"));
-		int i = 0;
-		@SuppressWarnings("unused")
-		int N = 0;
-		String line;
-		System.out.println("SLOPS OUTPUT");
+}
 
-		// read line by line
-		while ((line = buffReader.readLine()) != null) {
+public static boolean isSlop(String str){
+// A slop is Slap followed by a slip
+// A Slap is at least 2 characters long while a slip is at least 3 chars long
+// Thus, the size of a slop is at least 5
+if(str.length() < 5){
+return false;
+}else{
+//Slap end with 'H' if it is two characters long else it ends with 'C'
+if(isSlap(str.substring(0,2)) && isSlip(str.substring(2)) ){
+return true;
+}
 
-			// read first line and convert to integer
-			if (i == 0) {
-				N = Integer.parseInt(line);
-			} else {
+//find the last occurrence of 'C'
+int lastCindex = str.lastIndexOf('C');
+if(lastCindex == -1){
+return false;
+}else{
+if(isSlap(str.substring(0,lastCindex+1)) && isSlip(str.substring(lastCindex+1))){
+return true;
+}else{
+return false;
+}
+}
 
-				// each string is slop or not
-				isSlop(line);
-			}
-			i++;
-		}
-		buffReader.close();
-		System.out.println("END OF OUTPUT");
-	}
+}
+}
+
+/**
+* @param args
+ * @throws FileNotFoundException
+*/
+public static void main(String[] args) throws FileNotFoundException {
+Scanner in = new Scanner(new File("Java/Strings/sss.in"));
+
+int n = in.nextInt();
+ArrayList<String> list = new ArrayList<String>();
+for(int i =0;i<n;i++){
+list.add(in.next());
+}
+System.out.println("SLOPS OUTPUT");
+for(int i=0;i<n;i++){
+if(isSlop(list.get(i))){
+System.out.println("YES");
+}else{
+System.out.println("NO");
+}
+}
+System.out.println("END OF OUTPUT");
+
+}
 }
