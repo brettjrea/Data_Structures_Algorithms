@@ -4,6 +4,13 @@
             "type": "java",
             "name": "Launch Main",
             "request": "launch",
+            "mainClass": "BinarySearch.Main",
+            "projectName": "Algorithms_8a7c966"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
             "mainClass": "TreeTraversal.Main",
             "projectName": "Algorithms_8a7c966"
         },

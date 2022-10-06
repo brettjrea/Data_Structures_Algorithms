@@ -5,7 +5,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-public class BinarySearchFile {                                                
+public class Main {                                                
 
     // method to sort the array of Strings by size in ascending order using
     // selection sort
