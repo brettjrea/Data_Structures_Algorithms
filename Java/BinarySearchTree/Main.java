@@ -20,6 +20,26 @@ class BST_class {
     BST_class(){ 
         root = null; 
     } 
+    // insert a node in BST 
+    void insert(int key)  { 
+        root = insert_Recursive(root, key); 
+    } 
+   
+    //recursive insert function
+    Node insert_Recursive(Node root, int key) { 
+          //tree is empty
+        if (root == null) { 
+            root = new Node(key); 
+            return root; 
+        } 
+        //traverse the tree
+        if (key < root.key)     //insert in the left subtree
+            root.left = insert_Recursive(root.left, key); 
+        else if (key > root.key)    //insert in the right subtree
+            root.right = insert_Recursive(root.right, key); 
+          // return pointer
+        return root; 
+    } 
     //delete a node from BST
     void deleteKey(int key) { 
         root = delete_Recursive(root, key); 
@@ -61,27 +81,6 @@ class BST_class {
             root = root.left; 
         } 
         return minval; 
-    } 
-   
-    // insert a node in BST 
-    void insert(int key)  { 
-        root = insert_Recursive(root, key); 
-    } 
-   
-    //recursive insert function
-    Node insert_Recursive(Node root, int key) { 
-          //tree is empty
-        if (root == null) { 
-            root = new Node(key); 
-            return root; 
-        } 
-        //traverse the tree
-        if (key < root.key)     //insert in the left subtree
-            root.left = insert_Recursive(root.left, key); 
-        else if (key > root.key)    //insert in the right subtree
-            root.right = insert_Recursive(root.right, key); 
-          // return pointer
-        return root; 
     } 
  
     // method for inorder traversal of BST 
@@ -133,8 +132,7 @@ class BST_class {
    
         // now process root node 
         System.out.print(root.key + " "); 
-    } 
-
+    }   
      
     boolean search(int key)  { 
         root = search_Recursive(root, key); 
@@ -204,8 +202,8 @@ class Main{
         bst.postOrder(); 
         //search a key in the BST
         boolean ret_val = bst.search (50);
-        System.out.println("\n\nKey 50 found in BST:" + ret_val );
+        System.out.println("\n\nIs key 50 found in BST:" + ret_val );
         ret_val = bst.search (12);
-        System.out.println("\nKey 12 found in BST:" + ret_val );
+        System.out.println("\nIs key 12 found in BST:" + ret_val );
      } 
 }
