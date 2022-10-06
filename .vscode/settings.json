@@ -1,5 +1,10 @@
 {
     "cSpell.ignoreWords": [
         "subarray"
+    ],
+    "cSpell.words": [
+        "Cindex",
+        "inorder",
+        "minval"
     ]
 }

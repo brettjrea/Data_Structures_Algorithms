@@ -99,9 +99,9 @@ return false;
 
 /**
 * @param args
+ * @throws FileNotFoundException
 */
-public static void main(String[] args) {
-// TODO Auto-generated method stub
+public static void main(String[] args) throws FileNotFoundException {
 Scanner in = new Scanner(new File("Java/Strings2/sss.in"));
 
 int n = in.nextInt();

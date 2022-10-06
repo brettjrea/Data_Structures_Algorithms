@@ -1,3 +1,4 @@
+package Backtracking;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -14,9 +15,10 @@ public class NQueen {
                 board[rowNo][colNo] = '.';
             }
         }
+        sc.close();
         ArrayList<ArrayList<String>> ans = new ArrayList<>();
 
-        NQueen(size, board, 0, ans);
+        NQueenAL(size, board, 0, ans);
 
         if (ans.size() == 0) {
             System.out.println("No solution!");
@@ -27,7 +29,7 @@ public class NQueen {
 
     }
 
-    public static void NQueen(int size, char[][] b, int colNo, ArrayList<ArrayList<String>> ans) {
+    public static void NQueenAL(int size, char[][] b, int colNo, ArrayList<ArrayList<String>> ans) {
         if (colNo == size) {
             ArrayList<String> al = new ArrayList<>();
             for (int rowNo = 0; rowNo < size; rowNo++) {
@@ -45,7 +47,7 @@ public class NQueen {
 
                 b[rowNo][colNo] = 'Q';
 
-                NQueen(size, b, colNo + 1, ans);
+                NQueenAL(size, b, colNo + 1, ans);
 
                 b[rowNo][colNo] = '.';
 

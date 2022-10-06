@@ -1,3 +1,4 @@
+package Backtracking;
 /* Java program to solve N Queen Problem using
 backtracking 
 Time Complexity: O(N!)

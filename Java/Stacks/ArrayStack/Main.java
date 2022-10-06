@@ -1,6 +1,4 @@
 package Stacks.ArrayStack;
-
-import java.util.*;
 //Stack class
 class Stack {  
     int top;            //define top of stack

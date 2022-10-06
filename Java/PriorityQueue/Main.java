@@ -1,3 +1,5 @@
+package PriorityQueue;
+
 //PriorityQueue does not allow null values.
 //For non-comparable objects, we cannot create a priority queue.
 //The head or front of the queue contains the least element as per the natural ordering.

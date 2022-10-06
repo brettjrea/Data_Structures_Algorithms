@@ -201,7 +201,8 @@ class Main{
         System.out.println("\n\nBST => PostOrder Traversal:"); 
         bst.postOrder(); 
         //search a key in the BST
-        boolean ret_val = bst.search (50);
+        boolean ret_val;
+        ret_val = bst.search (50);
         System.out.println("\n\nIs key 50 found in BST:" + ret_val );
         ret_val = bst.search (12);
         System.out.println("\nIs key 12 found in BST:" + ret_val );
