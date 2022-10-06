@@ -1,6 +1,12 @@
 # Algorithms and Data Structures
 
-This code was built and tested with Github Codespaces IDE. If you are using Github Codespaces or Gitpod you can probably just right click the Main.java file and click Run Java or Run Code. You may see error warnings that the project couldn't build click proceed anyway because the files don't build a project they are all individual examples.
+This code was built and tested with Github Codespaces IDE. 
+
+If you are using Github Codespaces, VScode or Gitpod you can probably ***right click*** the Main.java file and click ***Run Java*.**
+
+If its C++ ***right click*** and ***run code*** should work.
+
+You may see ***error warnings*** that the project couldn't build just click ***proceed anyway*** because the files don't build a whole project as they are all individual examples.
 
 ---
 
