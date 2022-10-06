@@ -1,3 +1,4 @@
+package TreeTraversal;
 //https://pencilprogrammer.com/algorithms/inorder-preorder-postorder/#:~:text=In-order%2C%20pre-order%2C%20and%20post-order%20are%20three%20forms%20of,other%20in%20context%20of%20depth-first%20traversal.%20Inorder%20Traversal
 
 class Node{
@@ -99,5 +100,7 @@ class Node{
       
       System.out.print("\n Postorder: ");
       root.postOrder();
+
+      System.out.print("\n\n");
     }
   }

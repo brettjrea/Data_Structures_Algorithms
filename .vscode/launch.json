@@ -4,6 +4,34 @@
             "type": "java",
             "name": "Launch Main",
             "request": "launch",
+            "mainClass": "TreeTraversal.Main",
+            "projectName": "Algorithms_8a7c966"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "Mazesolver.Main",
+            "projectName": "Algorithms_8a7c966"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "MaxInArray.Main",
+            "projectName": "Algorithms_8a7c966"
+        },
+        {
+            "type": "java",
+            "name": "Launch DoublyLinkedList",
+            "request": "launch",
+            "mainClass": "DoublyLinkedList.DoublyLinkedList",
+            "projectName": "Algorithms_8a7c966"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
             "mainClass": "DivideConquer.Main",
             "projectName": "Algorithms_8a7c966"
         },

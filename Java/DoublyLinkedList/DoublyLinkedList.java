@@ -10,12 +10,12 @@ import java.util.Scanner;
  * @author lkfritz
  */
 
-public class DLinkedList<T extends Comparable<T>> {
+public class DoublyLinkedList<T extends Comparable<T>> {
 
 	public static void main(String[] args) throws FileNotFoundException {
 		long start = System.nanoTime();
-		DLinkedList<String> lst1 = new DLinkedList<>();
-		DLinkedList<String> lst2 = new DLinkedList<>();
+		DoublyLinkedList<String> lst1 = new DoublyLinkedList<>();
+		DoublyLinkedList<String> lst2 = new DoublyLinkedList<>();
 
 		Scanner fin = new Scanner(new File("Java/DoublyLinkedList/text1.in"));
 		String str;
@@ -39,7 +39,7 @@ public class DLinkedList<T extends Comparable<T>> {
         
         
         @SuppressWarnings("rawtypes")
-		DLinkedList combined = lst1.merge(lst2);
+		DoublyLinkedList combined = lst1.merge(lst2);
         
         System.out.println("\nAFTER MERGE");
         System.out.println("List 1: [" + lst1);
@@ -79,7 +79,7 @@ public class DLinkedList<T extends Comparable<T>> {
 	private DNode header;
 
 	// create an empty list: PROVIDED
-	public DLinkedList() {
+	public DoublyLinkedList() {
 		header = new DNode(null);
 	}
 
@@ -207,8 +207,8 @@ public class DLinkedList<T extends Comparable<T>> {
 	 *         returned list will not contain duplicates
 	 */
 	@SuppressWarnings({ "rawtypes", "unchecked" })
-	public DLinkedList merge(DLinkedList rhs) {
-		DLinkedList result = new DLinkedList();
+	public DoublyLinkedList merge(DoublyLinkedList rhs) {
+		DoublyLinkedList result = new DoublyLinkedList();
 		DNode current = this.header.prev;
 		while (current != this.header) {
 			result.add(current.data);

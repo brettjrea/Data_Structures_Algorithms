@@ -3,7 +3,7 @@ package MaxInArray;
 // An example for Algorithms and Data Structures
 
 //Identify a linear time algorithm O(1)
-public class MaxInArray {
+public class Main {
     public static void main(String[] args) {
         int[] array = new int[100];
 

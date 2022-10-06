@@ -4,7 +4,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-public class Driver {
+public class Main {
 
 	static MyStack<MazeCell> stack = new MyStack<MazeCell>();
 	static MyQ<MazeCell> queue = new MyQ<MazeCell>();
