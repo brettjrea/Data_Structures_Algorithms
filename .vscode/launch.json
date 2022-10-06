@@ -2,6 +2,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "DivideConquer.Main",
+            "projectName": "Algorithms_8a7c966"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "Bitwiseshift.Main",
+            "projectName": "Algorithms_8a7c966"
+        },
+        {
+            "type": "java",
+            "name": "Launch RightBitwiseShift",
+            "request": "launch",
+            "mainClass": "Bitwiseshift.RightBitwiseShift",
+            "projectName": "Algorithms_8a7c966"
+        },
+        {
+            "type": "java",
             "name": "Launch NQueen",
             "request": "launch",
             "mainClass": "Backtracking.NQueen",
