@@ -1,4 +1,4 @@
-package Java.HeapSort;
+package Java.Heap.HeapSort;
 
 import java.util.*;
 class HeapSort{

@@ -4,6 +4,13 @@
             "type": "java",
             "name": "Launch Main",
             "request": "launch",
+            "mainClass": "Java.Heap.MinHeap.Main",
+            "projectName": "Algorithms_8a7c966"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
             "mainClass": "Java.HeapSort.Main",
             "projectName": "Algorithms_8a7c966"
         },
