@@ -1,5 +1,4 @@
-
-                        Heap Data Structure
+                       Heap Data Structure
 
                         (12) <----Parent is the min value
                         /  \
