@@ -198,25 +198,23 @@ public class BSTree {
 			if (name.compareTo(focusNode.name) < 0) {
 				count++;
 				focusNode = focusNode.leftChild;
-				//
+				// If null entered
 				if (focusNode == null) {
 					System.out.println("Inspected " + count + " elements" + "\n" + name + " was not located");
 					return;
 				}
 
 				// search right
-				} else if (name.compareTo(focusNode.name) > 0) {
-					count++;
-					focusNode = focusNode.rightChild;
-					//
-					if (focusNode == null) {
-						System.out.println("Inspected " + count + " elements" + "\n" + name + " was not located");
-						return;
-					}
+			} else if (name.compareTo(focusNode.name) > 0) {
+				count++;
+				focusNode = focusNode.rightChild;
+				// If null entered
+				if (focusNode == null) {
+					System.out.println("Inspected " + count + " elements" + "\n" + name + " was not located");
+					return;
 				}
+			}
 		}
-
 		System.out.println("Inspected " + count + " elements" + "\n" + name + " located");
 	}
-
 }
