@@ -10,9 +10,9 @@ public class Main {
 	public static void main(String[] args) throws IOException {
 
 		BSTree bSTree = new BSTree();
-		Common Common = new Common();
+		Common common = new Common();
 
-		ArrayList<String> inputArray = Common.splitString("Java/BinarySearchTree/FiletoBST/input.in");
+		ArrayList<String> inputArray = common.splitString("Java/BinarySearchTree/FiletoBST/input.in");
 		System.out.println(inputArray.toString());
 
 		for (int i = 0; i <= inputArray.size() - 1; i++) {

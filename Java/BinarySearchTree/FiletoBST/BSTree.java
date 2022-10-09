@@ -74,6 +74,7 @@ public class BSTree {
 		}
 	}
 
+	
 	public boolean remove(String name) {
 		// start from the top
 		Node focusNode = root;
@@ -96,6 +97,7 @@ public class BSTree {
 			if (focusNode == null)
 				return false;
 		}
+		
 		// if node is empty delete
 		if (focusNode.leftChild == null && focusNode.rightChild == null) {
 			// delete root
@@ -107,7 +109,9 @@ public class BSTree {
 			} else {
 				// same for right side
 				parent.rightChild = null;
-			} // if no right child
+			} 
+			
+			// if no right child
 		} else if (focusNode.rightChild == null) {
 			if (focusNode == root)
 				// if focus node was on left, move focus nodes to parent node
@@ -117,7 +121,9 @@ public class BSTree {
 				parent.leftChild = focusNode.leftChild;
 			else
 				parent.rightChild = focusNode.leftChild;
-			// if no left child
+			
+			
+				// if no left child
 		} else if (focusNode.leftChild == null) {
 			if (focusNode == root)
 				root = focusNode.rightChild;
@@ -126,8 +132,10 @@ public class BSTree {
 			else if (isALeftChild)
 				parent.leftChild = focusNode.rightChild;
 			else
-				parent.rightChild = focusNode.leftChild;
-		} else {// deleted nodes replacement
+				parent.rightChild = focusNode.rightChild;
+		} else {
+
+			// deleted nodes replacement
 			Node replacement = getReplacementNode(focusNode);
 			// if focus is the root replace with replacement
 			if (focusNode == root)
@@ -144,6 +152,7 @@ public class BSTree {
 		return true;
 	}
 
+	
 	// replacement for when a node is deleted
 	private Node getReplacementNode(Node replacedNode) {
 		Node replacementParent = replacedNode;
@@ -166,6 +175,7 @@ public class BSTree {
 		}
 		return replacement;
 	}
+
 
 	// searches for node by name
 	public void findNode(String name) {
