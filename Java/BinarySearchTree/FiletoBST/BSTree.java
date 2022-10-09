@@ -62,19 +62,19 @@ public class BSTree {
 	}
 
 	// visit nodes in ascending order from left to right
-	public void inOrderTraverseTree(Node focusNode) {// time complexity of O(n) with n being the number of nodes in the tree
+	public void inOrderTraverseTree(Node focusNode) {// time complexity of O(n) with n being the number of nodes in the
+														// tree
 
 		if (focusNode != null) {
 			// left side
 			inOrderTraverseTree(focusNode.leftChild);
 			// current
-			System.out.print(focusNode + ", ") ;
+			System.out.print(focusNode + ", ");
 			// right side
 			inOrderTraverseTree(focusNode.rightChild);
 		}
 	}
 
-	
 	public boolean remove(String name) {
 		// start from the top
 		Node focusNode = root;
@@ -97,7 +97,7 @@ public class BSTree {
 			if (focusNode == null)
 				return false;
 		}
-		
+
 		// if node is empty delete
 		if (focusNode.leftChild == null && focusNode.rightChild == null) {
 			// delete root
@@ -109,8 +109,8 @@ public class BSTree {
 			} else {
 				// same for right side
 				parent.rightChild = null;
-			} 
-			
+			}
+
 			// if no right child
 		} else if (focusNode.rightChild == null) {
 			if (focusNode == root)
@@ -121,9 +121,8 @@ public class BSTree {
 				parent.leftChild = focusNode.leftChild;
 			else
 				parent.rightChild = focusNode.leftChild;
-			
-			
-				// if no left child
+
+			// if no left child
 		} else if (focusNode.leftChild == null) {
 			if (focusNode == root)
 				root = focusNode.rightChild;
@@ -152,7 +151,6 @@ public class BSTree {
 		return true;
 	}
 
-	
 	// replacement for when a node is deleted
 	private Node getReplacementNode(Node replacedNode) {
 		Node replacementParent = replacedNode;
@@ -175,7 +173,6 @@ public class BSTree {
 		}
 		return replacement;
 	}
-
 
 	// searches for node by name
 	public void findNode(String name) {

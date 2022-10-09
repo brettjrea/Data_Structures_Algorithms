@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-
 public class Main {
 
 	public static void main(String[] args) throws IOException {
@@ -13,19 +12,19 @@ public class Main {
 		Common common = new Common();
 
 		ArrayList<String> inputArray = common.splitString("Java/BinarySearchTree/FiletoBST/input.in");
+
+		System.out.println("\n");
 		System.out.println(inputArray.toString());
 
 		for (int i = 0; i <= inputArray.size() - 1; i++) {
-
 			bSTree.addNode(inputArray.get(i));
-
 		}
+
 		System.out.println("\n");
-		
-		
+
 		bSTree.inOrderTraverseTree(bSTree.root);
 		System.out.println("\n");
-		//scanner for user input
+		// scanner for user input
 		try (Scanner scanner = new Scanner(System.in)) {
 
 			do {
@@ -65,6 +64,5 @@ public class Main {
 
 			} while (true);
 		}
-
 	}
 }
