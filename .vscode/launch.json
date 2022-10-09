@@ -2,6 +2,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "BinarySearchTree.IntBST.Main",
+            "projectName": "Algorithms_8a7c966"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "BinarySearchTree.FiletoBST.Main",
+            "projectName": "Algorithms_8a7c966"
+        },
+        {
+            "type": "java",
             "name": "Launch Driver",
             "request": "launch",
             "mainClass": "BinarySearchTree.FiletoBST.Driver",

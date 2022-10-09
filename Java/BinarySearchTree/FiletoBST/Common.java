@@ -7,9 +7,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class Scrub {
+public class Common {
 	
-	public Scrub() {
+	public Common() {
 		
 	}
 	

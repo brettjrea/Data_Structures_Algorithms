@@ -1,4 +1,4 @@
-package BinarySearchTree;
+package BinarySearchTree.IntBST;
 
 class BST_class { 
     //node class that defines BST node
@@ -12,7 +12,6 @@ class BST_class {
         } 
     } 
 
-    
     // BST root node 
     Node root; 
   

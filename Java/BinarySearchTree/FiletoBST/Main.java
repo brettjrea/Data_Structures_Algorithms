@@ -5,14 +5,14 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 
-public class Driver {
+public class Main {
 
 	public static void main(String[] args) throws IOException {
 
-		BST bSTree = new BST();
-		Scrub Scrub = new Scrub();
+		BSTree bSTree = new BSTree();
+		Common Common = new Common();
 
-		ArrayList<String> inputArray = Scrub.splitString("Java/BinarySearchTree/FiletoBST/input.in");
+		ArrayList<String> inputArray = Common.splitString("Java/BinarySearchTree/FiletoBST/input.in");
 		System.out.println(inputArray.toString());
 
 		for (int i = 0; i <= inputArray.size() - 1; i++) {
