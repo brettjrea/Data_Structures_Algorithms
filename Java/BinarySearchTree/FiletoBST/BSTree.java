@@ -183,7 +183,14 @@ public class BSTree {
 		Node focusNode = root;
 		int count = 0;
 
+		if (focusNode == null) {
+			System.out.println("Inspected " + count + " elements" + "\n" + name + " was not located");
+			return;
+		}
+
 		if (focusNode.name.equals(name)) {
+			System.out.println("Inspected " + count + " elements" + "\n" + name + " located");
+			return;
 		}
 		// if not found, continue looking
 		while (!focusNode.name.equals(name)) {
@@ -191,19 +198,22 @@ public class BSTree {
 			if (name.compareTo(focusNode.name) < 0) {
 				count++;
 				focusNode = focusNode.leftChild;
+				//
 				if (focusNode == null) {
 					System.out.println("Inspected " + count + " elements" + "\n" + name + " was not located");
 					return;
 				}
+
 				// search right
-			} else if (name.compareTo(focusNode.name) > 0) {
-				count++;
-				focusNode = focusNode.rightChild;
-				if (focusNode == null) {
-					System.out.println("Inspected " + count + " elements" + "\n" + name + " was not located");
-					return;
+				} else if (name.compareTo(focusNode.name) > 0) {
+					count++;
+					focusNode = focusNode.rightChild;
+					//
+					if (focusNode == null) {
+						System.out.println("Inspected " + count + " elements" + "\n" + name + " was not located");
+						return;
+					}
 				}
-			}
 		}
 
 		System.out.println("Inspected " + count + " elements" + "\n" + name + " located");
