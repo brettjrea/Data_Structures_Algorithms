@@ -20,9 +20,12 @@ public class Main {
 			bSTree.addNode(inputArray.get(i));
 
 		}
+		System.out.println("\n");
 		
-		//scanner for user input
+		
 		bSTree.inOrderTraverseTree(bSTree.root);
+		System.out.println("\n");
+		//scanner for user input
 		try (Scanner scanner = new Scanner(System.in)) {
 
 			do {

@@ -68,7 +68,7 @@ public class BSTree {
 			// left side
 			inOrderTraverseTree(focusNode.leftChild);
 			// current
-			System.out.println(focusNode);
+			System.out.print(focusNode + ", ") ;
 			// right side
 			inOrderTraverseTree(focusNode.rightChild);
 		}
