@@ -162,15 +162,16 @@ class Main{
               45 
            /     \ 
           10      90 
-         /  \    /   
-        7   12  50   */
+         /  \    /  \ 
+        7   12  50   100*/
         //insert data into BST
         bst.insert(45); 
         bst.insert(10); 
         bst.insert(7); 
         bst.insert(12); 
         bst.insert(90); 
-        bst.insert(50);             
+        bst.insert(50); 
+        bst.insert(100);              
         //InOrder Traversal
         System.out.println("\nBST => InOrder Traversal:"); 
         bst.inOrder();
