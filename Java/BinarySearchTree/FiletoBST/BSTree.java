@@ -62,9 +62,8 @@ public class BSTree {
 	}
 
 	// visit nodes in ascending order from left to right
-	public void inOrderTraverseTree(Node focusNode) {// time complexity of O(n) with n being the number of nodes in the
-														// tree
-
+	public void inOrderTraverseTree(Node focusNode) {      // time complexity of O(n) with n being the number of nodes in the tree
+														
 		if (focusNode != null) {
 			// left side
 			inOrderTraverseTree(focusNode.leftChild);
