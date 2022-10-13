@@ -1,194 +1,236 @@
 package PerfectHashing;
 
-// Java program to demonstrate implementation of our
-// own hash table with chaining for collision detection
-import java.util.ArrayList;
-import java.util.Objects;
+// Java Program to implement hashtable in
+// double hashing
 
-// A node of chains
-class HashNode<K, V> {
-	K key;
-	V value;
-	final int hashCode;
+// Here performing additional task 
+// which is to remove the entered items
 
-	// Reference to next node
-	HashNode<K, V> next;
+// Importing input output classes
+import java.io.*;
+// Importing all classes from java.util package
+import java.util.*;
 
-	// Constructor
-	public HashNode(K key, V value, int hashCode)
+// Class 1
+// Class LinkedHashEntry 
+class ValueEntry {
+
+// Member variables of this class 
+	String key; 
+	int value;
+
+	// Constructor of this class
+	// Parameterized constructor 
+	ValueEntry(String key, int value)
 	{
-		this.key = key;
-		this.value = value;
-		this.hashCode = hashCode;
+		// 'This' keyword refers to the current object itself
+		// to assign the values
+		this.key = key; 
+		
+		// This keyword is pointer which contains location
+		// of that container that have key and value pairs
+	this.value = value;
 	}
 }
 
-// Class to represent entire hash table
-class Map<K, V> {
-	// bucketArray is used to store array of chains
-	private ArrayList<HashNode<K, V> > bucketArray;
+// Class 2
+// Helper class 
+// Class HashTable
+class HashTable {
 
-	// Current capacity of array list
-	private int numBuckets;
-
-	// Current size of array list
+	// Member variable of this class 
+	private int HASH_TABLE_SIZE;
 	private int size;
+	private ValueEntry[] table;
+	private int totalprimeSize;
 
-	// Constructor (Initializes capacity, size and
-	// empty chains.
-	public Map()
+	// Constructor of this class
+	// Parameterized constructor 
+	public HashTable(int ts)
 	{
-		bucketArray = new ArrayList<>();
-		numBuckets = 10;
+		// Initially, initializing the parameters
+		// to some values 
 		size = 0;
+		HASH_TABLE_SIZE = ts;
+		table = new ValueEntry[HASH_TABLE_SIZE];
 
-		// Create empty chains
-		for (int i = 0; i < numBuckets; i++)
-			bucketArray.add(null);
+		// Iterating using for loop over table 
+		for (int i = 0; i < HASH_TABLE_SIZE; i++)
+
+			// Initially table is empty 
+			table[i] = null;
+		totalprimeSize = getPrime();
 	}
 
-	public int size() { return size; }
-	public boolean isEmpty() { return size() == 0; }
-	
-	private final int hashCode (K key) {
-		return Objects.hashCode(key);
-	}
-
-	// This implements hash function to find index
-	// for a key
-	private int getBucketIndex(K key)
+	// Method 1
+	// To check for the prime number
+	public int getPrime()
 	{
-		int hashCode = hashCode(key);
-		int index = hashCode % numBuckets;
-		// key.hashCode() could be negative.
-		index = index < 0 ? index * -1 : index;
-		return index;
+		// Iterating over hashtable using nested for loops
+		// in reverse order 
+		for (int i = HASH_TABLE_SIZE - 1; i >= 1; i--) {
+
+			// Initially count is zero
+			int cnt = 0;
+
+			for (int j = 2; j * j <= i; j++)
+				if (i % j == 0)
+					cnt++;
+			if (cnt == 0)
+				return i;
+		}
+		// Returning a prime number
+		return 3;
 	}
 
-	// Method to remove a given key
-	public V remove(K key)
+	// Method 2
+	// To get snumber of key-value pairs
+	public int getSize() 
+	{ return size; }
+	public boolean isEmpty() 
+	{ return size == 0; }
+
+	// Method 3
+	// To clear the hash table
+	public void makeEmpty()
+	{ 
+		// Initially size set to zero 
+		size = 0;
+		for (int i = 0; i < HASH_TABLE_SIZE; i++)
+			table[i] = null;
+	}
+
+	// Method 3
+	// To get value of a key
+	public int getkey(String key)
 	{
-		// Apply hash function to find index for given key
-		int bucketIndex = getBucketIndex(key);
-		int hashCode = hashCode(key);
-		// Get head of chain
-		HashNode<K, V> head = bucketArray.get(bucketIndex);
+		int hash1 = myhash1(key);
+		int hash2 = myhash2(key);
 
-		// Search for key in its chain
-		HashNode<K, V> prev = null;
-		while (head != null) {
-			// If Key found
-			if (head.key.equals(key) && hashCode == head.hashCode)
-				break;
+		while (table[hash1] != null
+			&& !table[hash1].key.equals(key)) {
+			hash1 += hash2;
+			hash1 %= HASH_TABLE_SIZE;
+		}
+		return table[hash1].value;
+	}
 
-			// Else keep moving in chain
-			prev = head;
-			head = head.next;
+	// Method 4
+	// To insert a key-value pair
+	public void insert(String key, int value)
+	{
+		// Checking the size of table and 
+		// comparing it with users input value
+		if (size == HASH_TABLE_SIZE) {
+
+			// Display message 
+			System.out.println("Table is full");
+			return;
 		}
 
-		// If key was not there
-		if (head == null)
-			return null;
+		int hashing1 = myhash1(key);
+		int hashing2 = myhash2(key);
 
-		// Reduce size
-		size--;
-
-		// Remove key
-		if (prev != null)
-			prev.next = head.next;
-		else
-			bucketArray.set(bucketIndex, head.next);
-
-		return head.value;
-	}
-
-	// Returns value for a key
-	public V get(K key)
-	{
-		// Find head of chain for given key
-		int bucketIndex = getBucketIndex(key);
-		int hashCode = hashCode(key);
-	
-		HashNode<K, V> head = bucketArray.get(bucketIndex);
-
-		// Search key in chain
-		while (head != null) {
-			if (head.key.equals(key) && head.hashCode == hashCode)
-				return head.value;
-			head = head.next;
+		while (table[hashing1] != null) {
+			hashing1 += hashing2;
+			hashing1 %= HASH_TABLE_SIZE;
 		}
 
-		// If key not found
-		return null;
-	}
-
-	// Adds a key value pair to hash
-	public void add(K key, V value)
-	{
-		// Find head of chain for given key
-		int bucketIndex = getBucketIndex(key);
-		int hashCode = hashCode(key);
-		HashNode<K, V> head = bucketArray.get(bucketIndex);
-
-		// Check if key is already present
-		while (head != null) {
-			if (head.key.equals(key) && head.hashCode == hashCode) {
-				head.value = value;
-				return;
-			}
-			head = head.next;
-		}
-
-		// Insert key in chain
+		table[hashing1] = new ValueEntry(key, value);
 		size++;
-		head = bucketArray.get(bucketIndex);
-		HashNode<K, V> newNode
-			= new HashNode<K, V>(key, value, hashCode);
-		newNode.next = head;
-		bucketArray.set(bucketIndex, newNode);
-
-		// If load factor goes beyond threshold, then
-		// double hash table size
-		if ((1.0 * size) / numBuckets >= 0.7) {
-			ArrayList<HashNode<K, V> > temp = bucketArray;
-			bucketArray = new ArrayList<>();
-			numBuckets = 2 * numBuckets;
-			size = 0;
-			for (int i = 0; i < numBuckets; i++)
-				bucketArray.add(null);
-
-			for (HashNode<K, V> headNode : temp) {
-				while (headNode != null) {
-					add(headNode.key, headNode.value);
-					headNode = headNode.next;
-				}
-			}
-		}
 	}
 
-	// Driver method to test Map class
+	// Method 4
+	// To remove a key from hashtable 
+	public void remove(String key)
+	{
+		int hash1 = myhash1(key);
+		int hash2 = myhash2(key);
+		while (table[hash1] != null
+			&& !table[hash1].key.equals(key)) {
+			hash1 += hash2;
+			hash1 %= HASH_TABLE_SIZE;
+		}
+
+		table[hash1] = null;
+		size--;
+	}
+
+	// Method 5
+	// This method returns a hash value for a given
+	// string as it is linear probing
+	private int myhash1(String y)
+	{
+		int myhashVal1 = y.hashCode();
+		myhashVal1 %= HASH_TABLE_SIZE;
+		if (myhashVal1 < 0)
+			myhashVal1 += HASH_TABLE_SIZE;
+		return myhashVal1;
+	}
+
+	// Method 6
+	// In this function, 'myhash'function for double hashing
+	// after linear probing. A quadratic probing is used in
+	// which two 'myhash' functions are used
+	// as it is double chaining
+	private int myhash2(String y)
+	{
+		int myhashVal2 = y.hashCode();
+		myhashVal2 %= HASH_TABLE_SIZE;
+		if (myhashVal2 < 0)
+			myhashVal2 += HASH_TABLE_SIZE;
+		return totalprimeSize - myhashVal2 % totalprimeSize;
+	}
+
+	// Method 7
+	// To print hash table
+	public void printHashTable()
+	{
+		// Display message 
+		System.out.println("\nHash Table");
+
+		// Iterating over the table 
+		for (int i = 0; i < HASH_TABLE_SIZE; i++)
+			if (table[i] != null)
+				System.out.println(table[i].key + " "
+								+ table[i].value);
+	}
+}
+
+// Class 3
+// Main class 
+// Class for DoubleHashingHashTableTest
+public class Main {
+
+	// Main driver method 
 	public static void main(String[] args)
 	{
-		Map<String, Integer> map = new Map<>();
-		map.add("A", 1);
-		map.add("B", 2);
-		map.add("C", 3);
-		map.add("D", 4);
+		// Display message 
+		System.out.println("Hash Table Testing");
+		
+		// Step 1: Creating an object of hashtable
+		// of custom size 100 which signifies
+		// table can hold 100 key-value pairs 
+		HashTable ht = new HashTable(100);
 
-        System.out.println("Is Map empty? " + map.isEmpty());
-		System.out.println("Show MapSize: " + map.size());
-        System.out.println("Show Map Key A: " + map.get("A"));
-        System.out.println("Show Map Key B: " + map.get("B")); 
-        System.out.println("Show Map Key C: " + map.get("C")); 
-        System.out.println("Show Map Key D: " + map.get("D"));  
-
-        System.out.println(" ");  
-        
-		System.out.println("Remove Key A with value of " + map.remove("A"));
-		System.out.println("Show MapSize: " + map.size());
-        System.out.println("Show Map Key A: " + map.get("A"));
-        System.out.println("Show Map Key B: " + map.get("B")); 
-        System.out.println("Show Map Key C: " + map.get("C")); 
-        System.out.println("Show Map Key D: " + map.get("D"));   
+		// Step 2: Adding(appending) the values to 
+		// the hashtable object
+		// Custom inputs of key-value pairs 
+		ht.insert("prime", 97);
+		ht.insert("even", 96);
+		ht.insert("odd", 95);
+		
+		// Step 3: Printing hash table after insertion
+		// of key-value pairs
+		
+		// Calling print hash table function using object
+		// we call it with object.function_name
+		ht.printHashTable();
+	
+	// Primarily goal of the program 
+	// Step 4: Removing elements with using key values
+	// using the remove() method 
+	ht.remove("prime");
+	ht.printHashTable();
 	}
 }
