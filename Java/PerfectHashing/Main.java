@@ -2,8 +2,13 @@ package PerfectHashing;
 // Java Program to implement hashtable in
 // double hashing
 
-// Here performing additional task 
-// which is to remove the entered items
+// Here performing additional task 					Perfect Hashing is when you use 
+//                                                  two levels of Hashtables.
+//                                                  To sort your data and detect for collisions.
+//													It operates in 0(1) time. 
+//                                                  and has O(n) space complexity.
+//                                                  
+// which is to remove the entered items						
 
 // Class 1
 // Class LinkedHashEntry 
@@ -200,7 +205,7 @@ public class Main {
 	public static void main(String[] args)
 	{
 		// Display message 
-		System.out.println("Hash Table Testing");
+		System.out.println("\nHash Table Testing");
 		
 		// Step 1: Creating an object of hashtable
 		// of custom size 100 which signifies
@@ -213,6 +218,7 @@ public class Main {
 		ht.insert("prime", 97);
 		ht.insert("even", 96);
 		ht.insert("odd", 95);
+		
 		
 		// Step 3: Printing hash table after insertion
 		// of key-value pairs
