@@ -1,15 +1,9 @@
 package PerfectHashing;
-
 // Java Program to implement hashtable in
 // double hashing
 
 // Here performing additional task 
 // which is to remove the entered items
-
-// Importing input output classes
-import java.io.*;
-// Importing all classes from java.util package
-import java.util.*;
 
 // Class 1
 // Class LinkedHashEntry 
@@ -84,7 +78,7 @@ class HashTable {
 	}
 
 	// Method 2
-	// To get snumber of key-value pairs
+	// To get number of key-value pairs
 	public int getSize() 
 	{ return size; }
 	public boolean isEmpty() 
