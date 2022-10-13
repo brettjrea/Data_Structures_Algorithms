@@ -218,6 +218,7 @@ public class Main {
 		ht.insert("prime", 97);
 		ht.insert("even", 96);
 		ht.insert("odd", 95);
+		ht.insert("number", 95);
 		
 		
 		// Step 3: Printing hash table after insertion
@@ -231,6 +232,7 @@ public class Main {
 	// Step 4: Removing elements with using key values
 	// using the remove() method 
 	ht.remove("prime");
+	ht.remove("number");
 	ht.printHashTable();
 	}
 }
