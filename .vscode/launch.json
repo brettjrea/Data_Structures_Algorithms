@@ -1,407 +1,430 @@
 {
-    "configurations": [
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Launch Main",
+      "request": "launch",
+      "mainClass": "PerfectHashing.Main",
+      "projectName": "Algorithms_55eb6e6d"
+    },
+    {
+      "type": "java",
+      "name": "Launch Map",
+      "request": "launch",
+      "mainClass": "PerfectHashing.Map",
+      "projectName": "Algorithms_8a7c966"
+    },
+    {
+      "type": "java",
+      "name": "Launch Main",
+      "request": "launch",
+      "mainClass": "PerfectHashing.Main",
+      "projectName": "Algorithms_8a7c966"
+    },
+    {
+      "type": "java",
+      "name": "Launch Main",
+      "request": "launch",
+      "mainClass": "BinarySearchTree.IntBST.Main",
+      "projectName": "Algorithms_8a7c966"
+    },
+    {
+      "type": "java",
+      "name": "Launch Main",
+      "request": "launch",
+      "mainClass": "BinarySearchTree.FiletoBST.Main",
+      "projectName": "Algorithms_8a7c966"
+    },
+    {
+      "type": "java",
+      "name": "Launch Driver",
+      "request": "launch",
+      "mainClass": "BinarySearchTree.FiletoBST.Driver",
+      "projectName": "Algorithms_8a7c966"
+    },
+    {
+      "type": "java",
+      "name": "Launch Driver6",
+      "request": "launch",
+      "mainClass": "BinarySearchTree.FiletoBST.Driver6",
+      "projectName": "Algorithms_8a7c966"
+    },
+    {
+      "type": "java",
+      "name": "Launch Main",
+      "request": "launch",
+      "mainClass": "Heap.HeapSort.Main",
+      "projectName": "Algorithms_8a7c966"
+    },
+    {
+      "type": "java",
+      "name": "Launch Main",
+      "request": "launch",
+      "mainClass": "Heap.MinHeap.Main",
+      "projectName": "Algorithms_8a7c966"
+    },
+    {
+      "type": "java",
+      "name": "Launch Main",
+      "request": "launch",
+      "mainClass": "Java.Heap.MinHeap.Main",
+      "projectName": "Algorithms_8a7c966"
+    },
+    {
+      "type": "java",
+      "name": "Launch Main",
+      "request": "launch",
+      "mainClass": "Java.HeapSort.Main",
+      "projectName": "Algorithms_8a7c966"
+    },
+    {
+      "type": "java",
+      "name": "Launch Main",
+      "request": "launch",
+      "mainClass": "BinarySearch.Main",
+      "projectName": "Algorithms_8a7c966"
+    },
+    {
+      "type": "java",
+      "name": "Launch Main",
+      "request": "launch",
+      "mainClass": "TreeTraversal.Main",
+      "projectName": "Algorithms_8a7c966"
+    },
+    {
+      "type": "java",
+      "name": "Launch Main",
+      "request": "launch",
+      "mainClass": "Mazesolver.Main",
+      "projectName": "Algorithms_8a7c966"
+    },
+    {
+      "type": "java",
+      "name": "Launch Main",
+      "request": "launch",
+      "mainClass": "MaxInArray.Main",
+      "projectName": "Algorithms_8a7c966"
+    },
+    {
+      "type": "java",
+      "name": "Launch DoublyLinkedList",
+      "request": "launch",
+      "mainClass": "DoublyLinkedList.DoublyLinkedList",
+      "projectName": "Algorithms_8a7c966"
+    },
+    {
+      "type": "java",
+      "name": "Launch Main",
+      "request": "launch",
+      "mainClass": "DivideConquer.Main",
+      "projectName": "Algorithms_8a7c966"
+    },
+    {
+      "type": "java",
+      "name": "Launch Main",
+      "request": "launch",
+      "mainClass": "Bitwiseshift.Main",
+      "projectName": "Algorithms_8a7c966"
+    },
+    {
+      "type": "java",
+      "name": "Launch RightBitwiseShift",
+      "request": "launch",
+      "mainClass": "Bitwiseshift.RightBitwiseShift",
+      "projectName": "Algorithms_8a7c966"
+    },
+    {
+      "type": "java",
+      "name": "Launch NQueen",
+      "request": "launch",
+      "mainClass": "Backtracking.NQueen",
+      "projectName": "Algorithms_8a7c966"
+    },
+    {
+      "type": "java",
+      "name": "Launch Main",
+      "request": "launch",
+      "mainClass": "BinarySearchTree.Main",
+      "projectName": "Algorithms_8a7c966"
+    },
+    {
+      "type": "java",
+      "name": "Launch SlipSlapSlop",
+      "request": "launch",
+      "mainClass": "SlipSlapSlop.SlipSlapSlop",
+      "projectName": "Algorithms_8a7c966"
+    },
+    {
+      "type": "java",
+      "name": "Launch SlipSlapSlop",
+      "request": "launch",
+      "mainClass": "SlipSlapSlop",
+      "projectName": "Algorithms_8a7c966"
+    },
+    {
+      "type": "java",
+      "name": "Launch SlipSlopSlap",
+      "request": "launch",
+      "mainClass": "Strings2.SlipSlopSlap",
+      "projectName": "Algorithms_8a7c966"
+    },
+    {
+      "type": "java",
+      "name": "Launch SlipSlapSlop",
+      "request": "launch",
+      "mainClass": "Strings.SlipSlapSlop",
+      "projectName": "Algorithms_8a7c966"
+    },
+    {
+      "type": "java",
+      "name": "Launch NQueenProblem",
+      "request": "launch",
+      "mainClass": "NQueenProblem",
+      "projectName": "Algorithms_8a7c966"
+    },
+    {
+      "type": "java",
+      "name": "Launch NQueen",
+      "request": "launch",
+      "mainClass": "NQueen",
+      "projectName": "Algorithms_8a7c966"
+    },
+    {
+      "type": "java",
+      "name": "Launch Main",
+      "request": "launch",
+      "mainClass": "Stacks.ArrayStack.Main",
+      "projectName": "Algorithms_8a7c966"
+    },
+    {
+      "type": "java",
+      "name": "Launch Main",
+      "request": "launch",
+      "mainClass": "Stacks.LinkedListStack.Main",
+      "projectName": "Algorithms_8a7c966"
+    },
+    {
+      "type": "java",
+      "name": "Launch Main",
+      "request": "launch",
+      "mainClass": "Stacks.Stack.Main",
+      "projectName": "Algorithms_8a7c966"
+    },
+    {
+      "type": "java",
+      "name": "Launch Main",
+      "request": "launch",
+      "mainClass": "Stacks.Main",
+      "projectName": "Algorithms_8a7c966"
+    },
+    {
+      "type": "java",
+      "name": "Launch test",
+      "request": "launch",
+      "mainClass": "Bitwiseshift.test",
+      "projectName": "Algorithms_8a7c966"
+    },
+    {
+      "type": "java",
+      "name": "Launch SinglyLinkedListMergeSort",
+      "request": "launch",
+      "mainClass": "SingleLinkedListMergeSort.SinglyLinkedListMergeSort",
+      "projectName": "Algorithms_8a7c966"
+    },
+    {
+      "type": "java",
+      "name": "Launch Main",
+      "request": "launch",
+      "mainClass": "Compareto.Main",
+      "projectName": "Algorithms_8a7c966"
+    },
+    {
+      "type": "java",
+      "name": "Launch SinglyLinkedListMergeSort",
+      "request": "launch",
+      "mainClass": "SingleLinkedList.SinglyLinkedListMergeSort",
+      "projectName": "Algorithms_8a7c966"
+    },
+    {
+      "type": "java",
+      "name": "Launch SinglyLinkedList",
+      "request": "launch",
+      "mainClass": "SinLinkedList.SinglyLinkedList",
+      "projectName": "Algorithms_8a7c966"
+    },
+    {
+      "type": "java",
+      "name": "Launch main",
+      "request": "launch",
+      "mainClass": "Mazesolver.main",
+      "projectName": "Algorithms_8a7c966"
+    },
+    {
+      "type": "java",
+      "name": "Launch Driver",
+      "request": "launch",
+      "mainClass": "Mazesolver.Driver",
+      "projectName": "Algorithms_8a7c966"
+    },
+    {
+      "type": "java",
+      "name": "Launch Main",
+      "request": "launch",
+      "mainClass": "Main",
+      "projectName": "Algorithms_8a7c966"
+    },
+    {
+      "type": "java",
+      "name": "Launch Main",
+      "request": "launch",
+      "mainClass": "Deque.Main",
+      "projectName": "Algorithms_8a7c966"
+    },
+    {
+      "type": "java",
+      "name": "Launch SinglyLinkedList",
+      "request": "launch",
+      "mainClass": "SlinkedList.SinglyLinkedList",
+      "projectName": "Algorithms_8a7c966"
+    },
+    {
+      "type": "java",
+      "name": "Launch SinglyLinkedListMergeSort",
+      "request": "launch",
+      "mainClass": "SinglyLinkedListMergeSort",
+      "projectName": "Algorithms_8a7c966"
+    },
+    {
+      "type": "java",
+      "name": "Launch DLinkedList",
+      "request": "launch",
+      "mainClass": "DoublyLinkedList.DLinkedList",
+      "projectName": "Algorithms_8a7c966"
+    },
+    {
+      "type": "java",
+      "name": "Launch DLinkedList",
+      "request": "launch",
+      "mainClass": "DLinkedList",
+      "projectName": "Algorithms_8a7c966"
+    },
+    {
+      "type": "java",
+      "name": "Launch SinglyLinkedList",
+      "request": "launch",
+      "mainClass": "SinglyLinkedList.SinglyLinkedList",
+      "projectName": "Algorithms_8a7c966"
+    },
+    {
+      "type": "java",
+      "name": "Launch MaxInArray",
+      "request": "launch",
+      "mainClass": "MaxInArray.MaxInArray",
+      "projectName": "Algorithms_8a7c966"
+    },
+    {
+      "type": "java",
+      "name": "Launch test",
+      "request": "launch",
+      "mainClass": "Notes.test",
+      "projectName": "Algorithms_8a7c966"
+    },
+    {
+      "type": "java",
+      "name": "Launch BinarySearchFile",
+      "request": "launch",
+      "mainClass": "BinarySearch.BinarySearchFile",
+      "projectName": "Algorithms_8a7c966"
+    },
+    {
+      "type": "java",
+      "name": "Launch BinarySearchFile",
+      "request": "launch",
+      "mainClass": "BinarySearchFile",
+      "projectName": "Algorithms_8a7c966"
+    },
+    {
+      "type": "java",
+      "name": "Launch MaxInArray",
+      "request": "launch",
+      "mainClass": "MaxInArray",
+      "projectName": "Algorithms_8a7c966"
+    },
+    {
+      "name": "C/C++: g++ build and debug active file",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${fileDirname}/${fileBasenameNoExtension}",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${fileDirname}",
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "gdb",
+      "setupCommands": [
         {
-            "type": "java",
-            "name": "Launch Main",
-            "request": "launch",
-            "mainClass": "PerfectHashing.Main",
-            "projectName": "Algorithms_55eb6e6d"
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
         },
         {
-            "type": "java",
-            "name": "Launch Map",
-            "request": "launch",
-            "mainClass": "PerfectHashing.Map",
-            "projectName": "Algorithms_8a7c966"
-        },
-        {
-            "type": "java",
-            "name": "Launch Main",
-            "request": "launch",
-            "mainClass": "PerfectHashing.Main",
-            "projectName": "Algorithms_8a7c966"
-        },
-        {
-            "type": "java",
-            "name": "Launch Main",
-            "request": "launch",
-            "mainClass": "BinarySearchTree.IntBST.Main",
-            "projectName": "Algorithms_8a7c966"
-        },
-        {
-            "type": "java",
-            "name": "Launch Main",
-            "request": "launch",
-            "mainClass": "BinarySearchTree.FiletoBST.Main",
-            "projectName": "Algorithms_8a7c966"
-        },
-        {
-            "type": "java",
-            "name": "Launch Driver",
-            "request": "launch",
-            "mainClass": "BinarySearchTree.FiletoBST.Driver",
-            "projectName": "Algorithms_8a7c966"
-        },
-        {
-            "type": "java",
-            "name": "Launch Driver6",
-            "request": "launch",
-            "mainClass": "BinarySearchTree.FiletoBST.Driver6",
-            "projectName": "Algorithms_8a7c966"
-        },
-        {
-            "type": "java",
-            "name": "Launch Main",
-            "request": "launch",
-            "mainClass": "Heap.HeapSort.Main",
-            "projectName": "Algorithms_8a7c966"
-        },
-        {
-            "type": "java",
-            "name": "Launch Main",
-            "request": "launch",
-            "mainClass": "Heap.MinHeap.Main",
-            "projectName": "Algorithms_8a7c966"
-        },
-        {
-            "type": "java",
-            "name": "Launch Main",
-            "request": "launch",
-            "mainClass": "Java.Heap.MinHeap.Main",
-            "projectName": "Algorithms_8a7c966"
-        },
-        {
-            "type": "java",
-            "name": "Launch Main",
-            "request": "launch",
-            "mainClass": "Java.HeapSort.Main",
-            "projectName": "Algorithms_8a7c966"
-        },
-        {
-            "type": "java",
-            "name": "Launch Main",
-            "request": "launch",
-            "mainClass": "BinarySearch.Main",
-            "projectName": "Algorithms_8a7c966"
-        },
-        {
-            "type": "java",
-            "name": "Launch Main",
-            "request": "launch",
-            "mainClass": "TreeTraversal.Main",
-            "projectName": "Algorithms_8a7c966"
-        },
-        {
-            "type": "java",
-            "name": "Launch Main",
-            "request": "launch",
-            "mainClass": "Mazesolver.Main",
-            "projectName": "Algorithms_8a7c966"
-        },
-        {
-            "type": "java",
-            "name": "Launch Main",
-            "request": "launch",
-            "mainClass": "MaxInArray.Main",
-            "projectName": "Algorithms_8a7c966"
-        },
-        {
-            "type": "java",
-            "name": "Launch DoublyLinkedList",
-            "request": "launch",
-            "mainClass": "DoublyLinkedList.DoublyLinkedList",
-            "projectName": "Algorithms_8a7c966"
-        },
-        {
-            "type": "java",
-            "name": "Launch Main",
-            "request": "launch",
-            "mainClass": "DivideConquer.Main",
-            "projectName": "Algorithms_8a7c966"
-        },
-        {
-            "type": "java",
-            "name": "Launch Main",
-            "request": "launch",
-            "mainClass": "Bitwiseshift.Main",
-            "projectName": "Algorithms_8a7c966"
-        },
-        {
-            "type": "java",
-            "name": "Launch RightBitwiseShift",
-            "request": "launch",
-            "mainClass": "Bitwiseshift.RightBitwiseShift",
-            "projectName": "Algorithms_8a7c966"
-        },
-        {
-            "type": "java",
-            "name": "Launch NQueen",
-            "request": "launch",
-            "mainClass": "Backtracking.NQueen",
-            "projectName": "Algorithms_8a7c966"
-        },
-        {
-            "type": "java",
-            "name": "Launch Main",
-            "request": "launch",
-            "mainClass": "BinarySearchTree.Main",
-            "projectName": "Algorithms_8a7c966"
-        },
-        {
-            "type": "java",
-            "name": "Launch SlipSlapSlop",
-            "request": "launch",
-            "mainClass": "SlipSlapSlop.SlipSlapSlop",
-            "projectName": "Algorithms_8a7c966"
-        },
-        {
-            "type": "java",
-            "name": "Launch SlipSlapSlop",
-            "request": "launch",
-            "mainClass": "SlipSlapSlop",
-            "projectName": "Algorithms_8a7c966"
-        },
-        {
-            "type": "java",
-            "name": "Launch SlipSlopSlap",
-            "request": "launch",
-            "mainClass": "Strings2.SlipSlopSlap",
-            "projectName": "Algorithms_8a7c966"
-        },
-        {
-            "type": "java",
-            "name": "Launch SlipSlapSlop",
-            "request": "launch",
-            "mainClass": "Strings.SlipSlapSlop",
-            "projectName": "Algorithms_8a7c966"
-        },
-        {
-            "type": "java",
-            "name": "Launch NQueenProblem",
-            "request": "launch",
-            "mainClass": "NQueenProblem",
-            "projectName": "Algorithms_8a7c966"
-        },
-        {
-            "type": "java",
-            "name": "Launch NQueen",
-            "request": "launch",
-            "mainClass": "NQueen",
-            "projectName": "Algorithms_8a7c966"
-        },
-        {
-            "type": "java",
-            "name": "Launch Main",
-            "request": "launch",
-            "mainClass": "Stacks.ArrayStack.Main",
-            "projectName": "Algorithms_8a7c966"
-        },
-        {
-            "type": "java",
-            "name": "Launch Main",
-            "request": "launch",
-            "mainClass": "Stacks.LinkedListStack.Main",
-            "projectName": "Algorithms_8a7c966"
-        },
-        {
-            "type": "java",
-            "name": "Launch Main",
-            "request": "launch",
-            "mainClass": "Stacks.Stack.Main",
-            "projectName": "Algorithms_8a7c966"
-        },
-        {
-            "type": "java",
-            "name": "Launch Main",
-            "request": "launch",
-            "mainClass": "Stacks.Main",
-            "projectName": "Algorithms_8a7c966"
-        },
-        {
-            "type": "java",
-            "name": "Launch test",
-            "request": "launch",
-            "mainClass": "Bitwiseshift.test",
-            "projectName": "Algorithms_8a7c966"
-        },
-        {
-            "type": "java",
-            "name": "Launch SinglyLinkedListMergeSort",
-            "request": "launch",
-            "mainClass": "SingleLinkedListMergeSort.SinglyLinkedListMergeSort",
-            "projectName": "Algorithms_8a7c966"
-        },
-        {
-            "type": "java",
-            "name": "Launch Main",
-            "request": "launch",
-            "mainClass": "Compareto.Main",
-            "projectName": "Algorithms_8a7c966"
-        },
-        {
-            "type": "java",
-            "name": "Launch SinglyLinkedListMergeSort",
-            "request": "launch",
-            "mainClass": "SingleLinkedList.SinglyLinkedListMergeSort",
-            "projectName": "Algorithms_8a7c966"
-        },
-        {
-            "type": "java",
-            "name": "Launch SinglyLinkedList",
-            "request": "launch",
-            "mainClass": "SinLinkedList.SinglyLinkedList",
-            "projectName": "Algorithms_8a7c966"
-        },
-        {
-            "type": "java",
-            "name": "Launch main",
-            "request": "launch",
-            "mainClass": "Mazesolver.main",
-            "projectName": "Algorithms_8a7c966"
-        },
-        {
-            "type": "java",
-            "name": "Launch Driver",
-            "request": "launch",
-            "mainClass": "Mazesolver.Driver",
-            "projectName": "Algorithms_8a7c966"
-        },
-        {
-            "type": "java",
-            "name": "Launch Main",
-            "request": "launch",
-            "mainClass": "Main",
-            "projectName": "Algorithms_8a7c966"
-        },
-        {
-            "type": "java",
-            "name": "Launch Main",
-            "request": "launch",
-            "mainClass": "Deque.Main",
-            "projectName": "Algorithms_8a7c966"
-        },
-        {
-            "type": "java",
-            "name": "Launch SinglyLinkedList",
-            "request": "launch",
-            "mainClass": "SlinkedList.SinglyLinkedList",
-            "projectName": "Algorithms_8a7c966"
-        },
-        {
-            "type": "java",
-            "name": "Launch SinglyLinkedListMergeSort",
-            "request": "launch",
-            "mainClass": "SinglyLinkedListMergeSort",
-            "projectName": "Algorithms_8a7c966"
-        },
-        {
-            "type": "java",
-            "name": "Launch DLinkedList",
-            "request": "launch",
-            "mainClass": "DoublyLinkedList.DLinkedList",
-            "projectName": "Algorithms_8a7c966"
-        },
-        {
-            "type": "java",
-            "name": "Launch DLinkedList",
-            "request": "launch",
-            "mainClass": "DLinkedList",
-            "projectName": "Algorithms_8a7c966"
-        },
-        {
-            "type": "java",
-            "name": "Launch SinglyLinkedList",
-            "request": "launch",
-            "mainClass": "SinglyLinkedList.SinglyLinkedList",
-            "projectName": "Algorithms_8a7c966"
-        },
-        {
-            "type": "java",
-            "name": "Launch MaxInArray",
-            "request": "launch",
-            "mainClass": "MaxInArray.MaxInArray",
-            "projectName": "Algorithms_8a7c966"
-        },
-        {
-            "type": "java",
-            "name": "Launch test",
-            "request": "launch",
-            "mainClass": "Notes.test",
-            "projectName": "Algorithms_8a7c966"
-        },
-        {
-            "type": "java",
-            "name": "Launch BinarySearchFile",
-            "request": "launch",
-            "mainClass": "BinarySearch.BinarySearchFile",
-            "projectName": "Algorithms_8a7c966"
-        },
-        {
-            "type": "java",
-            "name": "Launch BinarySearchFile",
-            "request": "launch",
-            "mainClass": "BinarySearchFile",
-            "projectName": "Algorithms_8a7c966"
-        },
-        {
-            "type": "java",
-            "name": "Launch MaxInArray",
-            "request": "launch",
-            "mainClass": "MaxInArray",
-            "projectName": "Algorithms_8a7c966"
-        },
-        {
-            "name": "C/C++: g++ build and debug active file",
-            "type": "cppdbg",
-            "request": "launch",
-            "program": "${fileDirname}/${fileBasenameNoExtension}",
-            "args": [],
-            "stopAtEntry": false,
-            "cwd": "${fileDirname}",
-            "environment": [],
-            "externalConsole": false,
-            "MIMode": "gdb",
-            "setupCommands": [
-                {
-                    "description": "Enable pretty-printing for gdb",
-                    "text": "-enable-pretty-printing",
-                    "ignoreFailures": true
-                },
-                {
-                    "description": "Set Disassembly Flavor to Intel",
-                    "text": "-gdb-set disassembly-flavor intel",
-                    "ignoreFailures": true
-                }
-            ],
-            "preLaunchTask": "C/C++: g++ build active file",
-            "miDebuggerPath": "/usr/bin/gdb"
-        },
-        {
-            "name": "C/C++: g++-9 build and debug active file",
-            "type": "cppdbg",
-            "request": "launch",
-            "program": "${fileDirname}/${fileBasenameNoExtension}",
-            "args": [],
-            "stopAtEntry": false,
-            "cwd": "${fileDirname}",
-            "environment": [],
-            "externalConsole": false,
-            "MIMode": "gdb",
-            "setupCommands": [
-                {
-                    "description": "Enable pretty-printing for gdb",
-                    "text": "-enable-pretty-printing",
-                    "ignoreFailures": true
-                },
-                {
-                    "description": "Set Disassembly Flavor to Intel",
-                    "text": "-gdb-set disassembly-flavor intel",
-                    "ignoreFailures": true
-                }
-            ],
-            "preLaunchTask": "C/C++: g++-9 build active file",
-            "miDebuggerPath": "/usr/bin/gdb"
+          "description": "Set Disassembly Flavor to Intel",
+          "text": "-gdb-set disassembly-flavor intel",
+          "ignoreFailures": true
         }
-    ],
-    "version": "2.0.0"
+      ],
+      "preLaunchTask": "C/C++: g++ build active file",
+      "miDebuggerPath": "/usr/bin/gdb"
+    },
+    {
+      "name": "C/C++: g++-9 build and debug active file",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${fileDirname}/${fileBasenameNoExtension}",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${fileDirname}",
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        },
+        {
+          "description": "Set Disassembly Flavor to Intel",
+          "text": "-gdb-set disassembly-flavor intel",
+          "ignoreFailures": true
+        }
+      ],
+      "preLaunchTask": "C/C++: g++-9 build active file",
+      "miDebuggerPath": "/usr/bin/gdb"
+    },
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "cppdbg",
+      "request": "launch",
+      "args": [
+        ""
+      ],
+      "stopAtEntry": false,
+      "cwd": "/workspace/Algorithms/C++",
+      "environment": [],
+      "program": "/workspace/Algorithms/C++/build/Debug/outDebug",
+      "internalConsoleOptions": "openOnSessionStart",
+      "MIMode": "gdb",
+      "miDebuggerPath": "gdb",
+      "externalConsole": false,
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ]
+    }
+  ],
+  "version": "2.0.0"
 }
