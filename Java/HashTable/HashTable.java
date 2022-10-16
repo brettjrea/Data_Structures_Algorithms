@@ -64,7 +64,7 @@ public class HashTable {
 
     // updates hash table
     public void put(String key, Integer value) {
-        int index = Math.abs(key.hashCode() % ARR_SIZE);     //radix code to create index
+        int index = Math.abs(key.hashCode() % ARR_SIZE);     //radix code to create index absolute
         LinkedList<HashObject> items = arr[index];
         if (items == null) {
             items = new LinkedList<>();
