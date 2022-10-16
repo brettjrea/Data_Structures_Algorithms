@@ -20,10 +20,13 @@ public class Main {
         @SuppressWarnings("resource")
         Scanner scanner = new Scanner(System.in);
         do {
-            System.out.println("Enter search criteria, enter -1 to quit: ");
+            System.out.println("Enter search criteria, enter -1 to quit, or 'display' to view table: ");
             String input = scanner.nextLine();
             if (input.equals("-1")) {
                 break;
+            }
+            if (input.equals("display")) {
+                hashtable.displayTable();
             }
             if (hashtable.findObject(input) == null) {
                 System.out.println("No items found.  Result returned with 0 elements searched");

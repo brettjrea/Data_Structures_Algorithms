@@ -7,10 +7,7 @@ public class HashTable {
     public static class HashObject {
         @Override
         public String toString() {
-            return "HashObject{" +
-                    "key='" + key + '\'' +
-                    ", value=" + value +
-                    '}';
+            return value + " " +  key;                   
         }
 
         // hash table methods
