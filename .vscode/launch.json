@@ -4,6 +4,13 @@
       "type": "java",
       "name": "Launch Main",
       "request": "launch",
+      "mainClass": "HashTable.Main",
+      "projectName": "Algorithms_8a7c966"
+    },
+    {
+      "type": "java",
+      "name": "Launch Main",
+      "request": "launch",
       "mainClass": "PerfectHashing.Main",
       "projectName": "Algorithms_55eb6e6d"
     },
