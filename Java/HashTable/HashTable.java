@@ -18,7 +18,7 @@ public class HashTable {
     // set array of linked lists size to avoid collision
     private int ARR_SIZE = 8;
     @SuppressWarnings("unchecked")
-    private LinkedList<HashObject>[] arr = new LinkedList[ARR_SIZE];  //array of linked list
+    private LinkedList<HashObject>[] arr = new LinkedList[ARR_SIZE];   //array of linked list
 
     public HashTable() {
         for (int i = 0; i < ARR_SIZE; i++) {
@@ -64,7 +64,7 @@ public class HashTable {
 
     // updates hash table
     public void put(String key, Integer value) {
-        int index = Math.abs(key.hashCode() % ARR_SIZE);  //radix code to create index
+        int index = Math.abs(key.hashCode() % ARR_SIZE);     //radix code to create index
         LinkedList<HashObject> items = arr[index];
         if (items == null) {
             items = new LinkedList<>();
