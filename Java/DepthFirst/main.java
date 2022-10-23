@@ -36,14 +36,14 @@ class DFSTraversal {
                 }
             }
         }
-
+        // We use topological sorting when we need to schedule the jobs from the given dependencies among jobs.
         // DFS iterative implementation                    // Depth First is going to follow a subtree until its exhausted.
         void DFS_Iterative (int src) {                     // Then it backtracks and follows another route until its exhausted.
             Stack<Integer> stk = new Stack<>();            // It pops visited nodes from the stack to revisit root nodes. 
             stk.push(src);                                 // Good for detecting cycles and path finding.       
-            while (!stk.empty()) {
-                src = stk.peek();
-                stk.pop();
+            while (!stk.empty()) {                         // A trickle down
+                src = stk.peek();                          // vertices with 0 outgoing edges
+                stk.pop();                                 
                 if (!visited[src]) {
                     visited[src] = true;
                     System.out.print(src + " ");

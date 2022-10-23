@@ -36,8 +36,8 @@ class BFSTraversal {
             visited[src] = true;                      // and queuing any new adjacent 
                                                       // nodes while ignoring already visited nodes.
             while (!Q.isEmpty()) {                    // Good for shortest path and peer to peer networks.
-
-                src = Q.peek();
+                                                      // Like an elevator going through each floor.  
+                src = Q.peek();                       // Vertices with 0 inbound edges  
                 Q.remove();
 
                 for (int adj_node : adjlist.get(src)) {
