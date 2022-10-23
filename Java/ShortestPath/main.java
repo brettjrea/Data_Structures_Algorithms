@@ -114,9 +114,9 @@ public class main {
 
 	        //list of neighbors for Maricopa
 
-	        List<String> myList = g.getNeighbors("Greenlee");
+	        List<String> myList = g.getNeighbors("Mohave");
 
-	        System.out.print("Neighbor cities of Greenlee : ");
+	        System.out.print("Neighbor cities of Mohave: ");
 
 	        System.out.println(myList);//display list
 
