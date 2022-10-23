@@ -120,7 +120,7 @@ public class main {
 
 	        System.out.println(myList);//display list
 
-	        System.out.print("Distance between Maricopa and Yuma : " + g.getDistance("Maricopa","Yuma")+"\n");//distance between two cities
+	        System.out.print("Distance between Greenlee and La Paz: " + g.getDistance("Greenlee","La Paz")+"\n");//distance between two cities
 
 	        System.out.print("Adjacency Matrix: \n");
 	        g.print();//adjacency matrix
