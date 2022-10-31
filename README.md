@@ -1,4 +1,4 @@
-# Algorithms and Data Structures.
+# Data Structures and Algorithms.
 
 This code was built and tested with Github Codespaces IDE.
 
